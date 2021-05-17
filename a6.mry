@@ -1,0 +1,241 @@
+EFM ModelEFM{
+	component SourcePoint1(
+		type = "SourcePoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0
+		)
+	);
+
+	component TargetPoint1(
+		type = "TargetPoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0,
+			demandedEnergy = de
+		)
+	);
+
+	component UPS_5kVA2(
+		type = "UPS_5kVA",
+		parameters = (
+			maxPower = mp2,
+			efficiency = ef2,
+			retailPrice = rp2,
+			embeddedEnergy = emb2
+		)
+	);
+
+        component UPS_5kVA6(
+		type = "UPS_5kVA",
+		parameters = (
+			maxPower = mp6,
+			efficiency = ef6,
+			retailPrice = rp6,
+			embeddedEnergy = emb6
+		)
+	);
+
+        component GeneratorGroup11(
+		type = "GeneratorGroup",
+		parameters = (
+			maxPower = mp11,
+			efficiency = ef11,
+			retailPrice = rp11,
+			exergyCorrection = 1.06,
+			calorificPower = 43000.0,
+			embeddedEnergy = emb11
+		)
+	);
+
+        component STS7(
+		type = "STS",
+		parameters = (
+			maxPower = mp7,
+			efficiency = ef7,
+			retailPrice = rp7,
+			embeddedEnergy = emb7
+		)
+	);
+
+	component SDTransformer3(
+		type = "SDTransformer",
+		parameters = (
+			maxPower = mp3,
+			efficiency = ef3,
+			retailPrice = rp3,
+			embeddedEnergy = emb3
+		)
+	);
+
+	component Subpanel4(
+		type = "Subpanel",
+		parameters = (
+			maxPower = mp4,
+			efficiency = ef4,
+			retailPrice = rp4,
+			embeddedEnergy = emb4
+		)
+	);
+
+	component PowerStrip5(
+		type = "PowerStrip",
+		parameters = (
+			maxPower = mp5,
+			efficiency = ef5,
+			retailPrice = rp5,
+			embeddedEnergy = emb5
+		)
+	);
+
+
+	arc SourcePoint1 -> UPS_5kVA2;
+        arc SourcePoint1 -> UPS_5kVA6;
+        arc SourcePoint1 -> GeneratorGroup11;
+	arc UPS_5kVA2 -> STS7;
+        arc UPS_5kVA6 -> STS7;
+        arc GeneratorGroup11 -> STS7;
+        arc STS7 -> SDTransformer3;
+	arc SDTransformer3 -> Subpanel4;
+	arc Subpanel4 -> PowerStrip5;
+	arc PowerStrip5 -> TargetPoint1;
+
+	metric ic = initialCost( eletricityCost = ec);
+	metric oc = operationalCost( eletricityCost = ec, availability = aval, time = period );
+	metric ee = embeddedExergy;
+	metric oe = operationalExergy( time = period, availability = aval);
+	metric tc(ic + oc);
+	metric te(ee + oe);
+}
+
+t = 100;
+
+
+SPN ModelSPN{
+	place ma1n( tokens= 1 );
+        place P2off;
+	place P2on( tokens= 1 );
+	place P6off;
+	place P6on( tokens= 1 );
+        place P11off;
+	place P11on;
+	
+        immediateTransition reviveu2(
+		inputs = [P11on],
+		outputs = [ma1n],
+		inhibitors = [P2off]
+	);
+
+        immediateTransition reviveu6(
+		inputs = [P11on],
+		outputs = [ma1n],
+		inhibitors = [P6off]
+	);
+
+	timedTransition failureP2(
+		inputs = [P2on],
+		outputs = [P2off],
+		delay = mttf2
+	);
+
+	timedTransition failureP6(
+		inputs = [P6on],
+		outputs = [P6off],
+		delay = mttf6
+	);
+
+        timedTransition failureP11(
+		inputs = [P11on],
+		outputs = [P11off],
+		delay = mttf11
+	);
+
+	timedTransition repairP2(
+		inputs = [P2off],
+		outputs = [P2on],
+		delay = mttr2
+	);
+
+	timedTransition repairP6(
+		inputs = [P6off],
+		outputs = [P6on],
+		delay = mttr6
+	);
+
+        timedTransition repairP11(
+		inputs = [P11off],
+		outputs = [P11on],
+		delay = mttr11
+	);
+
+	timedTransition reserva(
+		inputs = [ma1n],
+		outputs = [P11on],
+		inhibitors = [P2on,P6on],
+		delay = 0.083
+	);
+
+	
+	metric redun = stationaryAnalysis( expression = "P{(((#P2on=1)OR(#P6on=1)OR(#P11on=1)))}");
+}
+
+
+RBD ModelRBDCold{
+
+   hierarchy a( availability = result);
+   block b3( MTTF = mttf3, MTTR = 156.01);
+   block b4( MTTF = mttf4, MTTR = 2.4);
+   block b5( MTTF = mttf5, MTTR = 3.8);
+   block b7( MTTF = mttf7, MTTR = 6.0);
+
+   series s1(a, b7, b3, b4, b5);
+
+   parallel p0(s1);
+
+   top p0;
+
+   metric avCold = availability;
+   metric relCold = reliability( time = t );
+   metric mttfCold = mttf;
+   metric mttrCold = mttr;
+}
+
+main{
+
+	av = solve(ModelRBD, av);
+	rel = solve(ModelRBD, rel);
+	mttf = solve(ModelRBD, mttf);
+	mttr = solve(ModelRBD, mttr);
+
+	println("Availability: " .. av );
+	println("Reliability: " .. rel );
+	println("Mean time to failure: " .. mttf );
+	println("Mean time to repair: " .. mttr );
+
+        redun = solve(ModelSPN, redun);
+        
+        redunFull = solve(ModelSPNFull, redunFull);
+
+        avCold = solve(ModelRBDCold, avCold);
+	relCold = solve(ModelRBDCold, relCold);
+	mttfCold = solve(ModelRBDCold, mttfCold);
+	mttrCold = solve(ModelRBDCold, mttrCold);
+
+	ic = solve(ModelEFM, ic);
+	println("Acquisition Cost: " .. ic);
+	oc = solve(ModelEFM, oc);
+	println("Operational Cost: " .. oc);
+	tc = solve(ModelEFM, tc);
+	println("Total Cost: " .. tc);
+	
+	println("");
+	
+	ee = solve(ModelEFM, ee);
+	println("Embedded Exergy: " .. ee);
+	oe = solve(ModelEFM, oe);
+	println("Operational Exergy: " .. oe);
+	te = solve(ModelEFM, te);
+	println("Total Exergy: " .. te);
+
+
+}

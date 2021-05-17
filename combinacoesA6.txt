@@ -1,0 +1,31 @@
+ups1-sdt1-subp-ps-ups2-ger-sts
+
+Otimo2
+
+
+minimos
+minDisp 1.7976931348623157E308
+minCusto 1.7976931348623157E308
+minExer 1.7976931348623157E308
+
+maximos
+maxDisp 0.0
+maxCusto 0.0
+maxExer 0.0
+
+Extremos Cold
+
+minimos
+minDisp 0.9989895079263186
+minCusto 24251.8019026139
+minExer 0.0
+
+maximos
+maxDisp 0.9994832218121836
+maxCusto 37579.2463410572
+maxExer 0.0
+
+
+comecou em: 131 , 10 : 31 : 37
+finalizou em: 131 , 10 : 57 : 27
+demorou:1550 segundos

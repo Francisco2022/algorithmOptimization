@@ -1,0 +1,158 @@
+EFM ModelEFM{
+	component SourcePoint1(
+		type = "SourcePoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0
+		)
+	);
+
+	component TargetPoint1(
+		type = "TargetPoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0,
+			demandedEnergy = de
+		)
+	);
+
+	component UPS_5kVA2(
+		type = "UPS_5kVA",
+		parameters = (
+			maxPower = mp2,
+			efficiency = ef2,
+			retailPrice = rp2,
+			embeddedEnergy = emb2
+		)
+	);
+
+        component UPS_5kVA6(
+		type = "UPS_5kVA",
+		parameters = (
+			maxPower = mp6,
+			efficiency = ef6,
+			retailPrice = rp6,
+			embeddedEnergy = emb6
+		)
+	);
+
+        
+	component SDTransformer3(
+		type = "SDTransformer",
+		parameters = (
+			maxPower = mp3,
+			efficiency = ef3,
+			retailPrice = rp3,
+			embeddedEnergy = emb3
+		)
+	);
+        
+        component SDTransformer8(
+		type = "SDTransformer",
+		parameters = (
+			maxPower = mp8,
+			efficiency = ef8,
+			retailPrice = rp8,
+			embeddedEnergy = emb8
+		)
+	);
+
+	component Subpanel4(
+		type = "Subpanel",
+		parameters = (
+			maxPower = mp4,
+			efficiency = ef4,
+			retailPrice = rp4,
+			embeddedEnergy = emb4
+		)
+	);
+
+        component Subpanel9(
+		type = "Subpanel",
+		parameters = (
+			maxPower = mp9,
+			efficiency = ef9,
+			retailPrice = rp9,
+			embeddedEnergy = emb9
+		)
+	);
+
+	component PowerStrip5(
+		type = "PowerStrip",
+		parameters = (
+			maxPower = mp5,
+			efficiency = ef5,
+			retailPrice = rp5,
+			embeddedEnergy = emb5
+		)
+	);
+
+	component PowerStrip10(
+		type = "PowerStrip",
+		parameters = (
+			maxPower = mp10,
+			efficiency = ef10,
+			retailPrice = rp10,
+			embeddedEnergy = emb10
+		)
+	);
+
+
+	arc SourcePoint1 -> UPS_5kVA2;
+        arc SourcePoint1 -> UPS_5kVA6;
+	arc UPS_5kVA2 -> SDTransformer3;
+        arc UPS_5kVA6 -> SDTransformer8;
+        arc SDTransformer3 -> Subpanel4;
+        arc SDTransformer8 -> Subpanel9;
+        arc Subpanel4 -> PowerStrip5;
+        arc Subpanel9 -> PowerStrip10;
+	arc PowerStrip5 -> TargetPoint1;
+        arc PowerStrip10 -> TargetPoint1;
+
+	metric ic = initialCost( eletricityCost = ec);
+	metric oc = operationalCost( eletricityCost = ec, availability = aval, time = period );
+	metric ee = embeddedExergy;
+	metric oe = operationalExergy( time = period, availability = aval);
+	metric tc(ic + oc);
+	metric te(ee + oe);
+
+}
+
+t = 100;
+
+
+RBD ModelRBD{
+
+   block b2( MTTF = mttf2, MTTR = 8.0);
+   block b3( MTTF = mttf3, MTTR = 156.01);
+   block b4( MTTF = mttf4, MTTR = 2.4);
+   block b5( MTTF = mttf5, MTTR = 3.8);
+   block b6( MTTF = mttf6, MTTR = 8.0);
+   block b8( MTTF = mttf8, MTTR = 156.01);
+   block b9( MTTF = mttf9, MTTR = 2.4);
+   block b10( MTTF = mttf10, MTTR = 3.8);
+
+   series s1(b2,b3, b4, b5);
+   series s2(b6,b8, b9, b10);
+   parallel p0(s1,s2);
+
+   top p0;
+
+   metric av = availability;
+   metric rel = reliability( time = t );
+   metric mttf = mttf;
+   metric mttr = mttr;
+}
+
+main{
+
+	av = solve(ModelRBD, av);
+	rel = solve(ModelRBD, rel);
+	mttf = solve(ModelRBD, mttf);
+	mttr = solve(ModelRBD, mttr);
+
+	println("Availability: " .. av );
+	println("Reliability: " .. rel );
+	println("Mean time to failure: " .. mttf );
+	println("Mean time to repair: " .. mttr );
+}

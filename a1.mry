@@ -1,0 +1,128 @@
+EFM ModelEFM{
+	component SourcePoint1(
+		type = "SourcePoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0
+		)
+	);
+
+	component TargetPoint1(
+		type = "TargetPoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0,
+			demandedEnergy = de
+		)
+	);
+
+	component UPS_5kVA2(
+		type = "UPS_5kVA",
+		parameters = (
+			maxPower = mp2,
+			efficiency = ef2,
+			retailPrice = rp2,
+			embeddedEnergy = emb2
+		)
+	);
+
+	component SDTransformer3(
+		type = "SDTransformer",
+		parameters = (
+			maxPower = mp3,
+			efficiency = ef3,
+			retailPrice = rp3,
+			embeddedEnergy = emb3
+		)
+	);
+
+	component Subpanel4(
+		type = "Subpanel",
+		parameters = (
+			maxPower = mp4,
+			efficiency = ef4,
+			retailPrice = rp4,
+			embeddedEnergy = emb4
+		)
+	);
+
+	component PowerStrip5(
+		type = "PowerStrip",
+		parameters = (
+			maxPower = mp5,
+			efficiency = ef5,
+			retailPrice = rp5,
+			embeddedEnergy = emb5
+		)
+	);
+
+
+	arc SourcePoint1 -> UPS_5kVA2;
+	arc UPS_5kVA2 -> SDTransformer3;
+	arc SDTransformer3 -> Subpanel4;
+	arc Subpanel4 -> PowerStrip5;
+	arc PowerStrip5 -> TargetPoint1;
+
+	metric ic = initialCost( eletricityCost = ec);
+	metric oc = operationalCost( eletricityCost = ec, availability = aval, time = period );
+	metric ee = embeddedExergy;
+	metric oe = operationalExergy( time = period, availability = aval);
+	metric tc(ic + oc);
+	metric te(ee + oe);
+}
+
+t = 100;
+
+
+RBD ModelRBD{
+
+   block b2( MTTF = mttf2, MTTR = 8.0);
+   block b3( MTTF = mttf3, MTTR = 156.01);
+   block b4( MTTF = mttf4, MTTR = 2.4);
+   block b5( MTTF = mttf5, MTTR = 3.8);
+
+   series s1(b2, b3, b4, b5);
+
+   parallel p0(s1);
+
+   top p0;
+
+   metric av = availability;
+   metric rel = reliability( time = t );
+   metric mttf = mttf;
+   metric mttr = mttr;
+}
+
+
+main{
+
+	av = solve(ModelRBD, av);
+	rel = solve(ModelRBD, rel);
+	mttf = solve(ModelRBD, mttf);
+	mttr = solve(ModelRBD, mttr);
+
+	println("Availability: " .. av );
+	println("Reliability: " .. rel );
+	println("Mean time to failure: " .. mttf );
+	println("Mean time to repair: " .. mttr );
+
+
+
+	ic = solve(ModelEFM, ic);
+	println("Acquisition Cost: " .. ic);
+	oc = solve(ModelEFM, oc);
+	println("Operational Cost: " .. oc);
+	tc = solve(ModelEFM, tc);
+	println("Total Cost: " .. tc);
+	
+	println("");
+	
+	ee = solve(ModelEFM, ee);
+	println("Embedded Exergy: " .. ee);
+	oe = solve(ModelEFM, oe);
+	println("Operational Exergy: " .. oe);
+	te = solve(ModelEFM, te);
+	println("Total Exergy: " .. te);
+
+
+}

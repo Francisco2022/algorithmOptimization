@@ -1,0 +1,20 @@
+ups-sdt-subp-ps		fitness				disp				custo				exergia					num9s				dispN				custoN				exergiaN
+
+Otimo
+
+5 - 3 - 6 - 9 - 	disp: 0.9994200087796523	 custo:  16574.24842141668	exergia:  0.23429468841950926	Disp em num 9: 3.236578580546394	fitness: 0.9308639556684113	dispN  0.9667873496015469	custoN  0.03592339393313555	exerN  0.0
+
+minimos
+minDisp 0.9986327852067121	6 - 1 - 7 - 6 - 0.0
+minCusto 16337.510191753154	7 - 3 - 4 - 9 - 16337.510191753154	 disp:  0.0
+minExer 0.23429468841950926	5 - 3 - 6 - 9 - 0.23429468841950926	 disp:  0.0
+
+maximos
+maxDisp 0.9994470527633414	8 - 3 - 9 - 10 - 0.0
+maxCusto 22927.59547445691	8 - 10 - 9 - 1 - 22927.59547445691	 disp:  0.0
+maxExer 7.051965692948595	2 - 10 - 9 - 8 - 7.051965692948595	 disp:  0.0
+
+
+comecou em: 135 , 18 : 38 : 18
+finalizou em: 135 , 18 : 38 : 25
+demorou:7 segundos
