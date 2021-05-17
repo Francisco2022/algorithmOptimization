@@ -805,8 +805,9 @@ public class AlgNSGA2 {
         }
         return (media/cromossomos.size());
     }
-
-    private boolean calcDevioPadrao(double[] medias) {
+    
+    //modificar este metodo para pegar o desvio padrão do fitness
+    private boolean calcDevioPadrao(double[] medias) { 
         double media = (medias[0] + medias[1] + medias[2])/3;
         double val1, val2, val3;
         val1 = Math.pow(medias[0] - media,2);
