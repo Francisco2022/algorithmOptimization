@@ -55,7 +55,7 @@ public class AlgNSGA2 {
         comps_arq.get(6).setAll("9", 5.0, 99.9, 0.4284, "Subpanel");
         comps_arq.add(new Componente());
         comps_arq.get(7).setAll("10", 5.0, 99.5, 0.35568, "PowerStrip");*///ao ativar esta linha comenta a linha 50 e 51 - sts
-        AlgNSGA2 alg = new AlgNSGA2(comps_arq, 30, 7000, 0.4, 1, 1000);
+        AlgNSGA2 alg = new AlgNSGA2(comps_arq, 50, 7000, 0.4, 1, 100);
     }
     
     public AlgNSGA2(ArrayList<Componente> comps_arq,int qtdCromo, int period, double ec, int de, int eras) {
@@ -170,6 +170,7 @@ public class AlgNSGA2 {
             mediasDisp[1] = mediasDisp[2];
             mediasDisp[2] = media;
             convergiuDisp = this.calcDevioPadrao(mediasDisp); 
+            System.out.println("disp " + media);
             
             //Calculando o desvio padrao da disponibilidade das 3 ultimas gerações.
             media = this.getMediaCusto();
@@ -178,6 +179,7 @@ public class AlgNSGA2 {
             mediasCusto[1] = mediasCusto[2];
             mediasCusto[2] = media;
             convergiuCusto = this.calcDevioPadrao(mediasCusto);
+            System.out.println("custo " + media);
             
             //Calculando o desvio padrao da disponibilidade das 3 ultimas gerações.
             media = this.getMediaExergia();
@@ -186,7 +188,10 @@ public class AlgNSGA2 {
             mediasExergia[1] = mediasExergia[2];
             mediasExergia[2] = media;
             convergiuExergia = this.calcDevioPadrao(mediasExergia);
+            System.out.println("exergia " + media);
             //System.out.println("desvio padrão " + convegiu);
+            
+            System.out.println("disp" + convergiuDisp +" custo "+ convergiuCusto +" exergia "+ convergiuExergia);
             
             if (convergiuDisp && convergiuCusto && convergiuExergia){
                 System.out.println("convegiu em " + cont + " geracoes");
@@ -814,20 +819,25 @@ public class AlgNSGA2 {
         val2 = Math.pow(medias[1] - media,2);
         val3 = Math.pow(medias[2] - media,2);
         double desvio = Math.sqrt((val1 + val2 + val3)/3);
+        System.out.println("media " + media + " desvio " + desvio);
         if (desvio == 0){
             //System.out.println("zero\n\n");
             return true;
         }
         boolean b1, b2, b3;
-        b1 = (medias[0] >= (media+desvio)) || (medias[0] <= (media-desvio));
-        b2 = (medias[1] >= (media+desvio)) || (medias[1] <= (media-desvio));
-        b3 = (medias[2] >= (media+desvio)) || (medias[2] <= (media-desvio));
+        b1 = (medias[0] <= (media+desvio)) && (medias[0] >= (media-desvio));
+        b2 = (medias[1] <= (media+desvio)) && (medias[1] >= (media-desvio));
+        b3 = (medias[2] <= (media+desvio)) && (medias[2] >= (media-desvio));
+        
+        /*b1 = !((medias[0] >= (media+desvio)) || (medias[0] <= (media-desvio)));
+        b2 = !((medias[1] >= (media+desvio)) || (medias[1] <= (media-desvio)));
+        b3 = !((medias[2] >= (media+desvio)) || (medias[2] <= (media-desvio)));*/
+        System.out.println("m1 " + medias[0] + " m2 " + medias[1] + " m3 " + medias[2]);
+        System.out.println("b1 " + b1 + " b2 " + b2 +" b3 " + b3);
         
         return (b1 && b2 && b3);
     }
-
 }
-
 
 //geramos a populacao inicial
     //ranqueamos a pop
