@@ -17,15 +17,15 @@ Extremos Cold
 
 minimos
 minDisp 0.9989895079263186
-minCusto 24251.8019026139
-minExer 0.0
+minCusto 26340.80474115717
+minExer 1.82626639233131
 
 maximos
 maxDisp 0.9994832218121836
-maxCusto 37579.2463410572
-maxExer 0.0
+maxCusto 39914.25660696613
+maxExer 6.625549875784975
 
 
-comecou em: 131 , 10 : 31 : 37
-finalizou em: 131 , 10 : 57 : 27
-demorou:1550 segundos
+comecou em: 141 , 16 : 2 : 43
+finalizou em: 141 , 16 : 43 : 33
+demorou:2450 segundos
