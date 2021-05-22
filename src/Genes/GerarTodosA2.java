@@ -18,12 +18,12 @@ import java.util.Map;
 import view.Componente;
 
 public class GerarTodosA2 {
-    static double minDispV = 0.998989463655407;
-    static double minCustoV = 27347.75077869695;
-    static double minExerV = 1.8573091877974526;
-    static double maxDispV = 0.9994832071469274;
-    static double maxCustoV = 41069.24805730429;
-    static double maxExerV = 7.219058978385679;
+    static double minDispV = 0.9986172374674931;
+    static double minCustoV = 29557.494279623275;
+    static double minExerV = 0.5307177804983718;
+    static double maxDispV = 0.9994703308264039;
+    static double maxCustoV = 42352.23449625792;
+    static double maxExerV = 8.478870765712227;
     
     static double minDispVCold = 0.998987302436096;
     static double minCustoVCold = 27347.745243919446;
@@ -47,7 +47,7 @@ public class GerarTodosA2 {
         double ec = 0.4;
         int de = 1;
         try {
-            File arquivo = new File("baseteste.txt");
+            File arquivo = new File("componentesBaseMenor.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();
