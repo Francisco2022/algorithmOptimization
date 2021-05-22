@@ -1,0 +1,24 @@
+ups1-sdt-subp-ps-ups2-sts
+
+Otimo
+
+
+Otimo2
+
+
+Extremos Hot
+
+minimos
+minDisp 0.9986172374674931	6 - 1 - 7 - 6 - 0.0
+minCusto 29557.494279623275	7 - 3 - 4 - 9 - 29557.494279623275	 disp:  0.0
+minExer 0.5307177804983718	5 - 3 - 6 - 9 - 0.5307177804983718	 disp:  0.0
+
+maximos
+maxDisp 0.9994703308264039	8 - 3 - 9 - 10 - 0.0
+maxCusto 42352.23449625792	8 - 10 - 9 - 1 - 42352.23449625792	 disp:  0.0
+maxExer 8.478870765712227	2 - 10 - 9 - 8 - 8.478870765712227	 disp:  0.0
+
+
+comecou em: 141 , 20 : 19 : 20
+finalizou em: 141 , 21 : 1 : 16
+demorou:2516 segundos
