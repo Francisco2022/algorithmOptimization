@@ -203,11 +203,11 @@ public class GerarTodosA2 {
                                     }*/
 
                                     //normalização
-                                    /*atual.setAvailability(FuncoesFB.normalizar(minDispV, maxDispV, atual.getAvailability()));
+                                    atual.setAvailability(FuncoesFB.normalizar(minDispV, maxDispV, atual.getAvailability()));
                                     atual.setOperationalExergy(FuncoesFB.normalizar(minExerV, maxExerV, atual.getOperationalExergy()));
                                     atual.setTotalCost(FuncoesFB.normalizar(minCustoV, maxCustoV, atual.getTotalCost()));
 
-                                    dado +=  "\tfitness: " + atual.fitness() + "\tdispN  " + atual.getAvailability() + "\tcustoN  " + atual.getTotalCost() + "\texerN  " + atual.getOperationalExergy();*/
+                                    dado +=  "\tfitness: " + atual.fitness() + "\tdispN  " + atual.getAvailability() + "\tcustoN  " + atual.getTotalCost() + "\texerN  " + atual.getOperationalExergy();
                                     //gravarArq.printf(dado);
                                     //normalizar os dados cold, fitnessCold so funcionará apos isso
                                     /*atual.setAvailabilityCold(FuncoesFB.normalizar(minDispVCold, maxDispVCold, atual.getAvailabilityCold()));

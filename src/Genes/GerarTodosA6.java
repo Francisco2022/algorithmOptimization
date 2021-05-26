@@ -182,16 +182,19 @@ public class GerarTodosA6 {
                                     //dado +=  "\tfitness: " + atual.fitness() + "\tdispN  " + atual.getAvailability() + "\tcustoN  " + atual.getTotalCost() + "\texerN  " + atual.getOperationalExergy();
                                     //gravarArq.printf(dado);
                                     //normalizar os dados cold, fitnessCold so funcionará apos isso
-                                    dado2 +=  "\tfitnessCold: " + atual.fitnessCold();// + "\tdispN  " + atual.getAvailability() + "\tcustoN  " + atual.getTotalCost() + "\texerN  " + atual.getOperationalExergy();
-
+                                        atual.setAvailabilityCold(FuncoesFB.normalizar(minDispVCold, maxDispVCold, atual.getAvailabilityCold()));
+                                        atual.setOperationalExergyCold(FuncoesFB.normalizar(minExerVCold, maxExerVCold, atual.getOperationalExergyCold()));
+                                        atual.setTotalCostCold(FuncoesFB.normalizar(minCustoVCold, maxCustoVCold, atual.getTotalCostCold()));
+                                        dado2 += "\tfitnessCold: " + atual.fitnessCold() + "\tdispN  " + atual.getAvailabilityCold() + "\tcustoN  " + atual.getTotalCostCold() + "\texerN  " + atual.getOperationalExergyCold();
+                                        
                                     if (atual.fitness() > maior) {
-                                        //segundo = maior;
-                                        otimo2 = dado2;//otimo2 = otimo;
+                                        segundo = maior;
+                                        otimo2 = otimo;
                                         //DecimalFormat decimalFormat = new DecimalFormat("#.##");
-                                        maior = atual.fitnessCold();
-                                        //otimo = dado;// + "\t custo:  " + Double.parseDouble(decimalFormat.format(atual.getTotalCost()).replace(',', '.')) + "\texergia:  " + Double.toString(atual.getOperationalExergy());
+                                        maior = atual.fitness();
+                                        otimo = dado2;// + "\t custo:  " + Double.parseDouble(decimalFormat.format(atual.getTotalCost()).replace(',', '.')) + "\texergia:  " + Double.toString(atual.getOperationalExergy());
                                         //System.out.println("antes  " + atual.getTotalCost() + "\tdepois  " +Double.parseDouble(decimalFormat.format(atual.getTotalCost()).replace(',', '.')));
-                                    }
+                                   }
 
                                         
                                     }
