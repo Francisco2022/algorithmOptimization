@@ -186,11 +186,9 @@ public class Cromossomo implements Cloneable{
         return scoreCold;
         
     }
-    
+ /*   
     public void calcularMetricasCold(String sript) {
-       /* if(this.score != 0){
-            this.score = 0;
-        } */
+       
         ExecutionRuntime runtime = new ExecutionRuntime();        
         Script script = new Script( new File(sript));        
         runtime.evaluateScript(script);
@@ -239,7 +237,58 @@ public class Cromossomo implements Cloneable{
         //Melhorar a funcao objetivo (fitness) para ser multiobjetivo
         //this.score = this.availability;//this.fitness();
     }
-
+*/
+    public void calcularMetricasCold(String sript) {
+       
+        ExecutionRuntime runtime = new ExecutionRuntime();        
+        Script script = new Script( new File(sript));        
+        runtime.evaluateScript(script);
+        
+        
+        //double aquisitionCost = 0 ;
+        double operacionalCost;
+        Componente comp;
+        ideq = "ids - ";
+        
+        for(int i = 0; i < this.genes.size(); i++){
+            comp = this.genes.get(i);
+            String idVert = comp.getIdVert();
+            //System.out.println("id" + idVert + comp.getTipoComp());
+            ideq += comp.getId() + " - ";
+            //System.out.println("id" + idVert);
+            
+                       
+            runtime.getVariableTable().setValue("mttf"+idVert, comp.getMttf());
+            runtime.getVariableTable().setValue("mttr"+idVert, comp.getMttr());
+            
+            runtime.getVariableTable().setValue("mp"+idVert, comp.getPoderMax());
+            runtime.getVariableTable().setValue("ef"+idVert, comp.getEficiencia());
+            runtime.getVariableTable().setValue("rp"+idVert, comp.getPreco());
+            runtime.getVariableTable().setValue("emb"+idVert, comp.getEnergia());
+            //aquisitionCost += (double)this.genes.get(i).getCost();                   
+        }
+        //System.out.println(ids);
+        Metric RedunCold = runtime.getModel("ModelSPN").getMetric("redun");
+        this.redun = RedunCold.solve();
+        runtime.getVariableTable().setValue("result",redun);
+        Metric Aval = runtime.getModel("ModelRBDCold").getMetric("avCold");
+        this.availability= Aval.solve();
+        
+        runtime.getVariableTable().setValue("aval", this.availability);
+        runtime.getVariableTable().setValue("period", this.period);
+        runtime.getVariableTable().setValue("ec", this.ec);
+        runtime.getVariableTable().setValue("de", this.de);
+        
+        Metric TCost = runtime.getModel("ModelEFM").getMetric("tc");
+        this.totalCost = TCost.solve();
+        Metric opExergy = runtime.getModel("ModelEFM").getMetric("oe");
+        this.operationalExergy = opExergy.solve();
+      //  System.out.println("exer: " + operationalExergy);
+        
+        //Melhorar a funcao objetivo (fitness) para ser multiobjetivo
+        //this.score = this.availability;//this.fitness();
+    }
+    
     public ArrayList<Componente> getGenes() {
         return genes;
     }
