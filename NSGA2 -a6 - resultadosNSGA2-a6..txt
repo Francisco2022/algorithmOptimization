@@ -1,60 +1,60 @@
 
-UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip9 - UPS_5kVA5 - STS4 - GeneratorGroup10 - 1.7976931348623157E308
-UPS_5kVA9 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup7 - 1.7976931348623157E308
-UPS_5kVA8 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup10 - 1.7976931348623157E308
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip9 - UPS_5kVA7 - STS4 - GeneratorGroup10 - 1.7976931348623157E308
-UPS_5kVA8 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup7 - 1.7976931348623157E308
-UPS_5kVA7 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA7 - STS4 - GeneratorGroup7 - 1.7976931348623157E308
-UPS_5kVA7 - SDTransformer3 - Subpanel3 - PowerStrip10 - UPS_5kVA7 - STS4 - GeneratorGroup7 - 0.6989150800856507
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip9 - UPS_5kVA7 - STS7 - GeneratorGroup10 - 0.6489694102562713
-UPS_5kVA9 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.515552151242691
-UPS_5kVA5 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.45953837553611165
-UPS_5kVA5 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup10 - 0.4160933048491921
-UPS_5kVA9 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup7 - 0.41449283836216944
-UPS_5kVA7 - SDTransformer3 - Subpanel3 - PowerStrip10 - UPS_5kVA7 - STS10 - GeneratorGroup7 - 0.10720990211987025
-UPS_5kVA7 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.1062523263973865
-UPS_5kVA7 - SDTransformer3 - Subpanel3 - PowerStrip7 - UPS_5kVA7 - STS4 - GeneratorGroup7 - 0.10130875384072605
-UPS_5kVA8 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup10 - 0.10113152937220328
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip5 - UPS_5kVA7 - STS5 - GeneratorGroup10 - 0.10091399416873217
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip10 - UPS_5kVA7 - STS4 - GeneratorGroup10 - 0.09773094277024591
-UPS_5kVA8 - SDTransformer3 - Subpanel3 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.09380846703230122
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip10 - UPS_5kVA7 - STS7 - GeneratorGroup10 - 0.08068492417293861
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA5 - STS5 - GeneratorGroup10 - 0.07677384280887105
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip5 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.07658182308450523
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA5 - STS4 - GeneratorGroup7 - 0.07567924285899652
-UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip9 - UPS_5kVA5 - STS5 - GeneratorGroup10 - 0.07439778927379559
-UPS_5kVA7 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA7 - STS10 - GeneratorGroup10 - 0.07250526727877281
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip7 - UPS_5kVA7 - STS10 - GeneratorGroup10 - 0.07155009210075577
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip7 - UPS_5kVA7 - STS4 - GeneratorGroup10 - 0.07129308364988017
-UPS_5kVA7 - SDTransformer3 - Subpanel3 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.059770491000411555
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip10 - UPS_5kVA7 - STS10 - GeneratorGroup10 - 0.059385510095583516
-UPS_5kVA8 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup7 - 0.059139835276483484
-UPS_5kVA9 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup10 - 0.05906761775805173
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip5 - UPS_5kVA7 - STS10 - GeneratorGroup10 - 0.05795530381616246
-UPS_5kVA8 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.05780355427225875
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip7 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.055301635026530946
-UPS_5kVA5 - SDTransformer3 - Subpanel4 - PowerStrip9 - UPS_5kVA5 - STS7 - GeneratorGroup7 - 0.053232582968340145
-UPS_5kVA7 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA7 - STS10 - GeneratorGroup7 - 0.052142833030031546
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip7 - UPS_5kVA7 - STS7 - GeneratorGroup10 - 0.051365311794979024
-UPS_5kVA7 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.05043377948915516
-UPS_5kVA8 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.05036156151961303
-UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip7 - UPS_5kVA7 - STS5 - GeneratorGroup7 - 0.04838529127364939
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.046972372766665965
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA7 - STS7 - GeneratorGroup7 - 0.04364392381407664
-UPS_5kVA7 - SDTransformer3 - Subpanel4 - PowerStrip9 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.04357514127445758
-UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip9 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.043542908404191824
-UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip5 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.041768935656507244
-UPS_5kVA9 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA8 - STS10 - GeneratorGroup10 - 0.041380474045809676
-UPS_5kVA9 - SDTransformer3 - Subpanel9 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup10 - 0.03379358977284032
-UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip10 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.03373145245519413
-UPS_5kVA5 - SDTransformer3 - Subpanel3 - PowerStrip9 - UPS_5kVA5 - STS10 - GeneratorGroup7 - 0.03328468193593441
-UPS_5kVA7 - SDTransformer3 - Subpanel6 - PowerStrip9 - UPS_5kVA5 - STS4 - GeneratorGroup10 - 0.031024712320337405
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA3 - STS1 - GeneratorGroup3 - 1.7976931348623157E308
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS1 - GeneratorGroup1 - 1.7976931348623157E308
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA3 - STS2 - GeneratorGroup3 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS1 - GeneratorGroup1 - 0.4919737122076353
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.44361301211092075
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.44357259364812923
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.4387256509136948
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.2854628067917573
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA3 - STS2 - GeneratorGroup1 - 0.2804392790012332
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.2335032159077917
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.22204249168037152
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA3 - STS2 - GeneratorGroup1 - 0.2156039829163361
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.17552283255895024
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.1672731361141576
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS2 - GeneratorGroup1 - 0.16364152548012958
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA3 - STS2 - GeneratorGroup3 - 0.16245913780992224
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.16224900946957801
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.15230904511913804
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.14569921311161937
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 0.14077972111892964
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.14077852086571938
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup1 - 0.07484446239044103
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.07131631296186583
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup1 - 0.07036763969823152
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS2 - GeneratorGroup3 - 0.06887089619384335
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.0681063140245744
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA3 - STS1 - GeneratorGroup3 - 0.0668441603888716
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.06554670570958805
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.06258256568588673
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.06239470250206165
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS1 - GeneratorGroup1 - 0.06148066083319104
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 0.06024372235269547
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.059851288163159516
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA3 - STS2 - GeneratorGroup3 - 0.05799218860994188
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.05409878614577131
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.053869500270913855
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 0.05289835191632316
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.05289792520497917
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA3 - STS2 - GeneratorGroup1 - 0.046869943741610444
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.019396246141949444
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip2 - UPS_5kVA1 - STS1 - GeneratorGroup3 - 0.018250675848380218
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA3 - STS1 - GeneratorGroup1 - 0.01824723329094878
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS2 - GeneratorGroup1 - 0.01770226148067577
+UPS_5kVA3 - SDTransformer2 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup3 - 0.013591612702535116
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA3 - STS2 - GeneratorGroup1 - 0.013538039075138895
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 0.013487998475014367
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip2 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 0.013157926128561679
 
 
-maior   UPS_5kVA5 - SDTransformer3 - Subpanel6 - PowerStrip9 - UPS_5kVA5 - STS4 - GeneratorGroup10 - 1.7976931348623157E308
-disp	0.999350817913296	custo: 29188.347795797796	exer: 0.48534821210261986	Disp em num9s   3.1876334724455617
+maior   UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip1 - UPS_5kVA1 - STS2 - GeneratorGroup1 - 1.7976931348623157E308
+disp	0.999464812590402	custo: 38389.331423903626	exer: 2.1737518449018816	Disp em num9s   3.271494111993641
 
 
-comecou em: 146 , 11 : 22 : 4
-finalizou em: 146 , 11 : 25 : 35
-demorou:211
+comecou em: 151 , 15 : 43 : 19
+finalizou em: 151 , 15 : 53 : 23
+demorou:604

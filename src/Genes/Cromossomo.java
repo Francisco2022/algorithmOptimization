@@ -178,7 +178,7 @@ public class Cromossomo implements Cloneable{
         //this.score = this.availability;//this.fitness();
     }
     
-    public double fitnessCold() {
+    /*public double fitnessCold() {
         //System.out.println("tc " +  (totalCost/1000000) + "\nav "+ (availability*100) + "\noe" + (operationalExergy/100000));
         //double score = totalCost/1000000 - (availability*100 + operationalExergy/100000);
                 
@@ -186,7 +186,7 @@ public class Cromossomo implements Cloneable{
         return scoreCold;
         
     }
- /*   
+/*   
     public void calcularMetricasCold(String sript) {
        
         ExecutionRuntime runtime = new ExecutionRuntime();        
@@ -272,7 +272,7 @@ public class Cromossomo implements Cloneable{
         this.redun = RedunCold.solve();
         runtime.getVariableTable().setValue("result",redun);
         Metric Aval = runtime.getModel("ModelRBDCold").getMetric("avCold");
-        this.availability= Aval.solve();
+        this.availability = Aval.solve();
         
         runtime.getVariableTable().setValue("aval", this.availability);
         runtime.getVariableTable().setValue("period", this.period);

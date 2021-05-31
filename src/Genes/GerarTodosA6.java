@@ -18,12 +18,12 @@ import java.util.Map;
 import view.Componente;
 
 public class GerarTodosA6 {
-    static double minDispV = 0.9997685120474682;
+    /*static double minDispV = 0.9997685120474682;
     static double minCustoV = 27786.019464403013;
     static double minExerV = 1.8580532685487299;
     static double maxDispV = 0.9998836955389875;
     static double maxCustoV = 41649.661992459514;
-    static double maxExerV = 7.2227618409672;
+    static double maxExerV = 7.2227618409672;*/
     
     static double minDispVCold = 0.998987302436096;
     static double minCustoVCold = 27347.745243919446;
@@ -47,7 +47,7 @@ public class GerarTodosA6 {
         double ec = 0.4;
         int de = 1;
         try {
-            File arquivo = new File("componentesBaseMenor.txt");
+            File arquivo = new File("baseteste.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();
@@ -144,48 +144,48 @@ public class GerarTodosA6 {
                                     dado += "\tdisp: " + atual.getAvailability() + "\t custo:  " + atual.getTotalCost() + "\texergia:  " + (atual.getOperationalExergy() + "\tDisp em num 9: " + FuncoesFB.numNove(atual.getAvailability()));
                                     */
                                     atual.calcularMetricasCold("a6.mry");
-                                    dado2 += "\tdispCold: " + atual.getAvailabilityCold()+ "\t custoCold:  " + atual.getTotalCostCold()+ "\texergiaCold:  " + (atual.getOperationalExergyCold()+ "\tDisp em num 9Cold: " + FuncoesFB.numNove(atual.getAvailabilityCold()));
+                                    dado2 += "\tdispCold: " + atual.getAvailability()+ "\t custoCold:  " + atual.getTotalCost()+ "\texergiaCold:  " + (atual.getOperationalExergy()+ "\tDisp em num 9Cold: " + FuncoesFB.numNove(atual.getAvailability()));
                                     
 
                                     //define os maximos e minimos l|I
                                     //normalização
 
-                                    atual.setAvailability(FuncoesFB.normalizar(minDispV, maxDispV, atual.getAvailability()));
+                                    /*atual.setAvailability(FuncoesFB.normalizar(minDispV, maxDispV, atual.getAvailability()));
                                     atual.setOperationalExergy(FuncoesFB.normalizar(minExerV, maxExerV, atual.getOperationalExergy()));
-                                    atual.setTotalCost(FuncoesFB.normalizar(minCustoV, maxCustoV, atual.getTotalCost()));
+                                    atual.setTotalCost(FuncoesFB.normalizar(minCustoV, maxCustoV, atual.getTotalCost()));*/
 
-                                    if (atual.getAvailabilityCold() > maxDispCold) {
+                                    if (atual.getAvailability() > maxDispCold) {
                                         //maxDispSCold = "\t" + ups.getId() + " - " + sdt.getId() + " - " + subp.getId() + " - " + ps.getId() + " - " + atual.getScore();
-                                        maxDispCold = atual.getAvailabilityCold();
+                                        maxDispCold = atual.getAvailability();
                                     }
-                                    if (atual.getAvailabilityCold() < minDispCold) {
+                                    if (atual.getAvailability() < minDispCold) {
                                         //minDispS = "\t" + ups.getId() + " - " + sdt.getId() + " - " + subp.getId() + " - " + ps.getId() + " - " + atual.getScore();
-                                        minDispCold = atual.getAvailabilityCold();
+                                        minDispCold = atual.getAvailability();
                                     }
-                                    if (atual.getTotalCostCold() > maxCustoCold) {
+                                    if (atual.getTotalCost() > maxCustoCold) {
                                         //maxCustoS = "\t" + ups.getId() + " - " + sdt.getId() + " - " + subp.getId() + " - " + ps.getId() + " - " + atual.getTotalCost() + "\t disp:  " + atual.getScore();
-                                        maxCustoCold = atual.getTotalCostCold();
+                                        maxCustoCold = atual.getTotalCost();
                                     }
-                                    if (atual.getTotalCostCold() < minCustoCold) {
+                                    if (atual.getTotalCost() < minCustoCold) {
                                         //minCustoS = "\t" + ups.getId() + " - " + sdt.getId() + " - " + subp.getId() + " - " + ps.getId() + " - " + atual.getTotalCost() + "\t disp:  " + atual.getScore();
-                                        minCustoCold = atual.getTotalCostCold();
+                                        minCustoCold = atual.getTotalCost();
                                     }
-                                    if (atual.getOperationalExergyCold() > maxExerCold) {
+                                    if (atual.getOperationalExergy() > maxExerCold) {
                                         //maxExerS = "\t" + ups.getId() + " - " + sdt.getId() + " - " + subp.getId() + " - " + ps.getId() + " - " + atual.getOperationalExergy() + "\t disp:  " + atual.getScore();
-                                        maxExerCold = atual.getOperationalExergyCold();
+                                        maxExerCold = atual.getOperationalExergy();
                                     }
-                                    if (atual.getOperationalExergyCold() < minExerCold) {
+                                    if (atual.getOperationalExergy() < minExerCold) {
                                         //minExerS = "\t" + ups.getId() + " - " + sdt.getId() + " - " + subp.getId() + " - " + ps.getId() + " - " + atual.getOperationalExergy() + "\t disp:  " + atual.getScore();
-                                        minExerCold = atual.getOperationalExergyCold();
+                                        minExerCold = atual.getOperationalExergy();
                                     }
                                     
                                     //dado +=  "\tfitness: " + atual.fitness() + "\tdispN  " + atual.getAvailability() + "\tcustoN  " + atual.getTotalCost() + "\texerN  " + atual.getOperationalExergy();
                                     //gravarArq.printf(dado);
                                     //normalizar os dados cold, fitnessCold so funcionará apos isso
-                                        atual.setAvailabilityCold(FuncoesFB.normalizar(minDispVCold, maxDispVCold, atual.getAvailabilityCold()));
-                                        atual.setOperationalExergyCold(FuncoesFB.normalizar(minExerVCold, maxExerVCold, atual.getOperationalExergyCold()));
-                                        atual.setTotalCostCold(FuncoesFB.normalizar(minCustoVCold, maxCustoVCold, atual.getTotalCostCold()));
-                                        dado2 += "\tfitnessCold: " + atual.fitnessCold() + "\tdispN  " + atual.getAvailabilityCold() + "\tcustoN  " + atual.getTotalCostCold() + "\texerN  " + atual.getOperationalExergyCold();
+                                        atual.setAvailability(FuncoesFB.normalizar(minDispVCold, maxDispVCold, atual.getAvailability()));
+                                        atual.setOperationalExergy(FuncoesFB.normalizar(minExerVCold, maxExerVCold, atual.getOperationalExergy()));
+                                        atual.setTotalCost(FuncoesFB.normalizar(minCustoVCold, maxCustoVCold, atual.getTotalCost()));
+                                        dado2 += "\tfitnessCold: " + atual.fitness() + "\tdispN  " + atual.getAvailability() + "\tcustoN  " + atual.getTotalCost() + "\texerN  " + atual.getOperationalExergy();
                                         
                                     if (atual.fitness() > maior) {
                                         segundo = maior;
@@ -214,8 +214,8 @@ public class GerarTodosA6 {
             //gravarArq.printf("\n\nOtimo\n" + otimo);
             gravarArq.printf("\n\nOtimo2\n" + otimo2);
             System.out.println("Otimo    " + maior);
-            gravarArq.printf("\n\nminimos\nminDisp " + minDisp + minDispS + "\nminCusto " + minCusto + minCustoS + "\nminExer " + minExer + minExerS);
-            gravarArq.printf("\n\nmaximos\nmaxDisp " + maxDisp + maxDispS + "\nmaxCusto " + maxCusto + maxCustoS + "\nmaxExer " + maxExer + maxExerS);
+            /*gravarArq.printf("\n\nminimos\nminDisp " + minDisp + minDispS + "\nminCusto " + minCusto + minCustoS + "\nminExer " + minExer + minExerS);
+            gravarArq.printf("\n\nmaximos\nmaxDisp " + maxDisp + maxDispS + "\nmaxCusto " + maxCusto + maxCustoS + "\nmaxExer " + maxExer + maxExerS);*/
 
             gravarArq.printf("\n\nExtremos Cold");
             gravarArq.printf("\n\nminimos\nminDisp " + minDispCold + minDispS + "\nminCusto " + minCustoCold + minCustoS + "\nminExer " + minExerCold + minExerS);

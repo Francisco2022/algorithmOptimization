@@ -36,6 +36,9 @@ public class AlgNSGA2 {
     String ranqueamento = "";
     
     public static void main(String[] args){
+        /*quando mudar para rodar com scripts que são hot
+            alterar onde estiver calcularmetricasCold para apenas calcularmetricas
+        */
         ArrayList<Componente> comps_arq = new ArrayList<>();
         comps_arq.add(new Componente());
         comps_arq.get(0).setAll("2", 5.0, 95.3, 3.1392, "UPS_5kVA");
@@ -301,7 +304,7 @@ public class AlgNSGA2 {
     private void lerComponentes() {//le de um arquivo com varios componentes de todos os tipos e salva num dicionario (dicComp)
         try{
             //le o arquivo
-            File arquivo = new File("ComponentesBaseMenor.txt");
+            File arquivo = new File("baseteste.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();

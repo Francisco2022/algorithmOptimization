@@ -2,30 +2,24 @@ ups1-sdt1-subp-ps-ups2-ger-sts
 
 Otimo2
 
-
-minimos
-minDisp 1.7976931348623157E308
-minCusto 1.7976931348623157E308
-minExer 1.7976931348623157E308
-
-maximos
-maxDisp 0.0
-maxCusto 0.0
-maxExer 0.0
+3 - 2 - 3 - 1 - 3 - 1 - 1 - 	dispCold: 0.9994756112747951	 custoCold:  33677.83447391144	exergiaCold:  2.862638118194431	Disp em num 9Cold: 3.2803466545752866	fitnessCold: 0.33834202260732626	dispN  0.9871695983353902	custoN  0.46132642008272273	exerN  0.1875011556453412
 
 Extremos Cold
 
 minimos
-minDisp 0.9989895079263186
-minCusto 26340.80474115717
-minExer 1.82626639233131
+minDisp 0.9990405001338156
+minCusto 33516.62391465291
+minExer 2.1737518449018816
+        2.1737518449018816
 
 maximos
-maxDisp 0.9994832218121836
-maxCusto 39914.25660696613
-maxExer 6.625549875784975
+maxDisp 0.9994818563408343
+        0.999464812590402
+maxCusto 39687.74516001654
+         38389.331423903626
+maxExer 5.860378399125697
 
 
-comecou em: 141 , 16 : 2 : 43
-finalizou em: 141 , 16 : 43 : 33
-demorou:2450 segundos
+comecou em: 151 , 15 : 38 : 38
+finalizou em: 151 , 15 : 40 : 11
+demorou:93 segundos
