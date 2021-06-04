@@ -21,6 +21,6 @@ maxCusto 42352.23449625792	8 - 10 - 9 - 1 - 42352.23449625792	 disp:  0.0
 maxExer 8.478870765712227	2 - 10 - 9 - 8 - 8.478870765712227	 disp:  0.0
 
 
-comecou em: 146 , 10 : 13 : 23
-finalizou em: 146 , 11 : 2 : 18
-demorou:2935 segundos
+comecou em: 152 , 20 : 9 : 24
+finalizou em: 152 , 20 : 37 : 38
+demorou:1694 segundos
