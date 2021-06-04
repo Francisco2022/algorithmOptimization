@@ -29,7 +29,7 @@ public class AlgNSGA2 {
     private Map<String, ArrayList<Componente>> dicComp = new HashMap<>();//dicionario com as base de componentes
     private Random rand = new Random();//objeto que gera valores inteiros aleatorios
     private Map<String, ArrayList<Cromossomo>> dicRank = new HashMap<>();
-    private String arq = "a6";
+    private String arq = "a3";
     private String script = arq + ".mry";
     private int dia1, hora1, min1, seg1, dia2, hora2, min2, seg2, duracao;   
     
@@ -48,19 +48,19 @@ public class AlgNSGA2 {
         comps_arq.get(2).setAll("4", 5.0, 99.9, 0.4284, "Subpanel");
         comps_arq.add(new Componente());
         comps_arq.get(3).setAll("5", 5.0, 99.5, 0.35568, "PowerStrip");
-       comps_arq.add(new Componente());
+        comps_arq.add(new Componente());
         comps_arq.get(4).setAll("6", 5.0, 95.3, 3.1392, "UPS_5kVA");
         comps_arq.add(new Componente());
         comps_arq.get(5).setAll("7", 5.0, 99.5, 0.35928, "STS");
-        /*comps_arq.add(new Componente());
-        comps_arq.get(5).setAll("8", 5.0, 98.5, 0.35928, "SDTransformer");
         comps_arq.add(new Componente());
+        comps_arq.get(6).setAll("8", 5.0, 98.5, 0.35928, "SDTransformer");
+        /*comps_arq.add(new Componente());
         comps_arq.get(6).setAll("9", 5.0, 99.9, 0.4284, "Subpanel");
         comps_arq.add(new Componente());
         comps_arq.get(7).setAll("10", 5.0, 99.5, 0.35568, "PowerStrip");*///ao ativar esta linha comenta a linha 50 e 51 - sts
-        comps_arq.add(new Componente());
-        comps_arq.get(6).setAll("11", 5.0, 99.5, 0.35568, "GeneratorGroup"); //posição da lista deve respeitar a ordem. 
-        AlgNSGA2 alg = new AlgNSGA2(comps_arq, 50, 7000, 0.4, 1, 100);
+        //comps_arq.add(new Componente());
+        //comps_arq.get(6).setAll("11", 5.0, 99.5, 0.35568, "GeneratorGroup"); //posição da lista deve respeitar a ordem. 
+        AlgNSGA2 alg = new AlgNSGA2(comps_arq, 50, 7000, 0.4, 1, 200);
     }
     
     public AlgNSGA2(ArrayList<Componente> comps_arq,int qtdCromo, int period, double ec, int de, int eras) {
@@ -291,8 +291,8 @@ public class AlgNSGA2 {
                 }
                     cromo = new Cromossomo(genes, period, ec, de);
                     cromossomos.add(cromo);
-                    //cromo.calcularMetricas(this.script);//.setScore("Script1.mry");
-                    cromo.calcularMetricasCold(this.script);
+                    cromo.calcularMetricas(this.script);//.setScore("Script1.mry");
+                    //cromo.calcularMetricasCold(this.script);
                     cont++;
                 }
         }catch(Exception ex){
@@ -304,7 +304,7 @@ public class AlgNSGA2 {
     private void lerComponentes() {//le de um arquivo com varios componentes de todos os tipos e salva num dicionario (dicComp)
         try{
             //le o arquivo
-            File arquivo = new File("baseteste.txt");
+            File arquivo = new File("componentesBaseMenor.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();
@@ -361,11 +361,11 @@ public class AlgNSGA2 {
         Cromossomo cromo1 = this.selecaoTorneio();
         Cromossomo cromo2 = this.selecaoTorneio();
         
-        //cromo1.calcularMetricas(this.script);//.setScore("Script1.mry");
-        //cromo2.calcularMetricas(this.script);//.setScore("Script1.mry");
+        cromo1.calcularMetricas(this.script);//.setScore("Script1.mry");
+        cromo2.calcularMetricas(this.script);//.setScore("Script1.mry");
         
-        cromo1.calcularMetricasCold(this.script);//.setScore("Script1.mry");
-        cromo2.calcularMetricasCold(this.script);//.setScore("Script1.mry");
+        //cromo1.calcularMetricasCold(this.script);//.setScore("Script1.mry");
+        //cromo2.calcularMetricasCold(this.script);//.setScore("Script1.mry");
         
         ArrayList<Componente> genes;//tem alguma regra quanto o cruzamento em si e mutacao?
         
@@ -401,11 +401,11 @@ public class AlgNSGA2 {
                 quebra--;
             }
            // System.out.println("mutacao terminada");
-            //cruza1.calcularMetricas(this.script);
-            //cruza2.calcularMetricas(this.script);
+            cruza1.calcularMetricas(this.script);
+            cruza2.calcularMetricas(this.script);
             
-            cruza1.calcularMetricasCold(this.script);
-            cruza2.calcularMetricasCold(this.script);
+            //cruza1.calcularMetricasCold(this.script);
+            //cruza2.calcularMetricasCold(this.script);
             
             
             nova.add(cruza1);

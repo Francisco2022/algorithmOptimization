@@ -25,12 +25,12 @@ public class GerarTodosA2 {
     static double maxCustoV = 42352.23449625792;
     static double maxExerV = 8.478870765712227;
     
-    static double minDispVCold = 0.998987302436096;
+   /* static double minDispVCold = 0.998987302436096;
     static double minCustoVCold = 27347.745243919446;
     static double minExerVCold = 1.8573051696845204;
     static double maxDispVCold = 0.9994819579031227;
     static double maxCustoVCold = 41069.242549139715;
-    static double maxExerVCold = 7.219047848281659;
+    static double maxExerVCold = 7.219047848281659; */
     
     public static void main(String[] args){
         Calendar data = Calendar.getInstance();
