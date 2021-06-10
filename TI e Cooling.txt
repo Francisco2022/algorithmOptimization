@@ -1,0 +1,137 @@
+EFM Model{
+	component SourcePoint1(
+		type = "SourcePoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0
+		)
+	);
+
+	component TargetPoint1(
+		type = "TargetPoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0,
+			demandedEnergy = 1.0
+		)
+	);
+
+	component Server1(
+		type = "Server",
+		parameters = (
+			maxPower = 550.0,
+			efficiency = 90.0,
+			retailPrice = 3000.0,
+			embeddedEnergy = 0.35568
+		)
+	);
+
+	component Switch1(
+		type = "Switch",
+		parameters = (
+			maxPower = 550.0,
+			efficiency = 90.0,
+			retailPrice = 400.0,
+			embeddedEnergy = 0.35568
+		)
+	);
+
+	component Router1(
+		type = "Router",
+		parameters = (
+			maxPower = 550.0,
+			efficiency = 90.0,
+			retailPrice = 4000.0,
+			embeddedEnergy = 0.35568
+		)
+	);
+
+	component Chiller0(
+		type = "Chiller",
+		parameters = (
+			maxPower = 15.0,
+			efficiency = 4.0,
+			retailPrice = 5300.0,
+			embeddedEnergy = 4.5209,
+			chilledWaterTemperature = 7.0,
+			collingWaterTemperature = 35.0
+		)
+	);
+
+	component Chiller_C1(
+		type = "Chiller_C",
+		parameters = (
+			maxPower = 250.0,
+			efficiency = 4.0,
+			retailPrice = 40000.0,
+			embeddedEnergy = 34.12,
+			chilledWaterTemperature = 7.0,
+			collingWaterTemperature = 35.0
+		)
+	);
+
+	component C_Tower_2(
+		type = "C_Tower",
+		parameters = (
+			maxPower = 20.0,
+			retailPrice = 1500.0,
+			embeddedEnergy = 1.2795,
+			hotWaterTemperature = 35.0,
+			environmentTemperature = 25.0
+		)
+	);
+
+	component C_Tower_C3(
+		type = "C_Tower_C",
+		parameters = (
+			maxPower = 250.0,
+			retailPrice = 9000.0,
+			embeddedEnergy = 7.6777,
+			hotWaterTemperature = 35.0,
+			environmentTemperature = 25.0
+		)
+	);
+
+	component CRAC4(
+		type = "CRAC",
+		parameters = (
+			maxPower = 20.0,
+			efficiency = 98.0,
+			retailPrice = 3200.0,
+			embeddedEnergy = 2.7296,
+			roomTemperature = 20.0,
+			coldWaterTemperature = 7.0
+		)
+	);
+
+	component CRAC_30t5(
+		type = "CRAC_30t",
+		parameters = (
+			maxPower = 300.0,
+			efficiency = 98.0,
+			retailPrice = 30000.0,
+			embeddedEnergy = 25.59,
+			roomTemperature = 20.0,
+			coldWaterTemperature = 7.0
+		)
+	);
+
+	arc SourcePoint1 -> Server1;
+	arc Server1 -> Switch1;
+	arc Switch1 -> Router1;
+	arc Router1 -> Chiller0;
+	arc Router1 -> Chiller_C1;
+	arc Chiller0 -> C_Tower_2;
+	arc Chiller_C1 -> C_Tower_C3;
+	arc C_Tower_C3 -> CRAC_30t5;
+	arc C_Tower_2 -> CRAC4;
+	arc CRAC4 -> TargetPoint1;
+	arc CRAC_30t5 -> TargetPoint1;
+
+	metric ic = initialCost( eletricityCost = 1);
+	metric oc = operationalCost( eletricityCost = 1, availability = 1, time = 1 );
+	metric ee = embeddedExergy;
+	metric oe = operationalExergy( time = 1, availability = 1);
+	metric tc(ic + oc);
+	metric te(ee + oe);
+}

@@ -141,7 +141,7 @@ public class GerarTodosA2 {
                                     dado = "\n";
                                     dado2 = "\n";
                                     for (Componente l1 : genes) {
-                                        dado2 += l1.getId() + " - ";// + sdt.getId() + " - " + subp.getId() + " - " + ps.getId();//+numNove(atual.availability);
+                                        dado += l1.getId() + " - ";// + sdt.getId() + " - " + subp.getId() + " - " + ps.getId();//+numNove(atual.availability);
                                     }
                                     atual.calcularMetricas("a2.mry");
                                         dado += "\tdisp: " + atual.getAvailability() + "\t custo:  " + atual.getTotalCost() + "\texergia:  " + (atual.getOperationalExergy() + "\tDisp em num 9: " + FuncoesFB.numNove(atual.getAvailability()));

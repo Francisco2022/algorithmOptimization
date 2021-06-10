@@ -164,6 +164,15 @@ public class Componente implements Serializable, Cloneable{
             this.setMttf(11511175.63);
             this.setMttr(3.8);
         }
+        else if (novo_tipo.equals("JunctionBox")) {
+            this.setTipoComp("JunctionBox");
+            this.setPoderMax(5.0);
+            this.setEficiencia(99.5);
+            this.setPreco(200.0);
+            this.setEnergia(0.35568);
+            this.setMttf(11511175.63);
+            this.setMttr(3.8);
+        }
     }
 
     public String getIdVert() {
