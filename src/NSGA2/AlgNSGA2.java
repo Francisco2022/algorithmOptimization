@@ -48,19 +48,19 @@ public class AlgNSGA2 {
         comps_arq.get(2).setAll("4", 5.0, 99.9, 0.4284, "Subpanel");
         comps_arq.add(new Componente());
         comps_arq.get(3).setAll("5", 5.0, 99.5, 0.35568, "PowerStrip");
-       comps_arq.add(new Componente());
+        comps_arq.add(new Componente());
         comps_arq.get(4).setAll("6", 5.0, 95.3, 3.1392, "UPS_5kVA");
         comps_arq.add(new Componente());
         comps_arq.get(5).setAll("7", 5.0, 99.5, 0.35928, "STS");
+        comps_arq.add(new Componente());
+        comps_arq.get(6).setAll("8", 5.0, 98.5, 0.35928, "SDTransformer");
+        comps_arq.add(new Componente());
+        comps_arq.get(7).setAll("9", 5.0, 99.9, 0.4284, "Subpanel");
         /*comps_arq.add(new Componente());
-        comps_arq.get(5).setAll("8", 5.0, 98.5, 0.35928, "SDTransformer");
-        comps_arq.add(new Componente());
-        comps_arq.get(6).setAll("9", 5.0, 99.9, 0.4284, "Subpanel");
-        comps_arq.add(new Componente());
         comps_arq.get(7).setAll("10", 5.0, 99.5, 0.35568, "PowerStrip");*///ao ativar esta linha comenta a linha 50 e 51 - sts
         comps_arq.add(new Componente());
-        comps_arq.get(6).setAll("11", 5.0, 99.5, 0.35568, "GeneratorGroup"); //posição da lista deve respeitar a ordem. 
-        AlgNSGA2 alg = new AlgNSGA2(comps_arq, 50, 7000, 0.4, 1, 100);
+        comps_arq.get(8).setAll("11", 5.0, 99.5, 0.35568, "GeneratorGroup"); //ao ativar esta linha comenta a linha 59 e 60 posição da lista deve respeitar a ordem e descomentar o sts (se tiver comentado). 
+        AlgNSGA2 alg = new AlgNSGA2(comps_arq, 50, 7000, 0.4, 1, 1000);
     }
     
     public AlgNSGA2(ArrayList<Componente> comps_arq,int qtdCromo, int period, double ec, int de, int eras) {
@@ -304,7 +304,7 @@ public class AlgNSGA2 {
     private void lerComponentes() {//le de um arquivo com varios componentes de todos os tipos e salva num dicionario (dicComp)
         try{
             //le o arquivo
-            File arquivo = new File("baseteste.txt");
+            File arquivo = new File("componentesBaseMenor.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();

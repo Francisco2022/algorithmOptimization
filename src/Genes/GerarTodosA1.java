@@ -41,7 +41,7 @@ public class GerarTodosA1 {
         double ec = 0.4;
         int de = 1;
         try {
-            File arquivo = new File("ComponentesBaseMenor.txt");
+            File arquivo = new File("componentesBaseMenor.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();
