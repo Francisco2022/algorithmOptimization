@@ -36,6 +36,7 @@ public class Componente implements Serializable, Cloneable{
         this.preco = preco;
         this.energia = energia;
         this.tipoComp = tipoComp;
+        this.nomeComp = tipoComp+idVert;
     }
     public void setAll(String idVert, double poderMax, double eficiencia, double energia, String tipoComp){
         this.idVert = idVert;
@@ -172,6 +173,62 @@ public class Componente implements Serializable, Cloneable{
             this.setEnergia(0.35568);
             this.setMttf(11511175.63);
             this.setMttr(3.8);
+        }
+        //TI
+        else if (novo_tipo.equals("Server")) {
+            this.setTipoComp("Server");
+            this.setPoderMax(550.0);
+            this.setEficiencia(90.0);
+            this.setPreco(3000.0);
+            this.setEnergia(0.35568);
+            this.setMttf(1414.0);
+            this.setMttr(0.99);
+        }
+        else if (novo_tipo.equals("Switch")) {
+            this.setTipoComp("Switch");
+            this.setPoderMax(550.0);
+            this.setEficiencia(90.0);
+            this.setPreco(400.0);
+            this.setEnergia(0.35568);
+            this.setMttf(9090.0);
+            this.setMttr(0.64);
+        }
+        else if (novo_tipo.equals("Router")) {
+            this.setTipoComp("Router");
+            this.setPoderMax(550.0);
+            this.setEficiencia(90.0);
+            this.setPreco(4000.0);
+            this.setEnergia(0.35568);
+            this.setMttf(12181.0);
+            this.setMttr(0.52);
+        }
+        //cooling
+        else if (novo_tipo.equals("Chiller")) {
+            this.setTipoComp("Chiller");
+            this.setPoderMax(15.0);
+            this.setEficiencia(4.0);
+            this.setPreco(5300.0);
+            this.setEnergia(4.5209);
+            this.setMttf(18000.0);
+            this.setMttr(48.0);
+        }
+        else if (novo_tipo.equals("C_Tower")) {
+            this.setTipoComp("C_Tower");
+            this.setPoderMax(2.0);
+            this.setEficiencia(99.5);
+            this.setPreco(1500.0);
+            this.setEnergia(1.2795);
+            this.setMttf(24816.0);
+            this.setMttr(48.0);
+        }
+        else if (novo_tipo.equals("CRAC")) {
+            this.setTipoComp("CRAC");
+            this.setPoderMax(20.0);
+            this.setEficiencia(98.0);
+            this.setPreco(3200.0);
+            this.setEnergia(2.7296);
+            this.setMttf(37509.0);
+            this.setMttr(8.0);
         }
     }
 

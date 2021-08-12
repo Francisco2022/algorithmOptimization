@@ -23,20 +23,36 @@ public class AlgGenetico {
     private ArrayList<Cromossomo> cromossomos = new ArrayList<>();
     private Map<String, ArrayList<Componente>> dicComp = new HashMap<>();
     private Random rand = new Random();
-    private String script = "Script1.mry";
+    private String script = "a1.mry";
     
     
     public static void main(String[] args){
         ArrayList<Componente> comps_arq = new ArrayList<>();
         comps_arq.add(new Componente());
-        comps_arq.get(0).setAll("2", 5.0, 95.3, 3.1392, "UPS_5kVA");
+        comps_arq.get(0).setAll("1", 5.0, 95.3, 3.1392, "UPS_5kVA");
         comps_arq.add(new Componente());
-        comps_arq.get(1).setAll("3", 5.0, 98.5, 0.35928, "SDTransformer");
+        comps_arq.get(1).setAll("2", 5.0, 98.5, 0.35928, "SDTransformer");
         comps_arq.add(new Componente());
-        comps_arq.get(2).setAll("4", 5.0, 99.9, 0.4284, "Subpanel");
+        comps_arq.get(2).setAll("3", 5.0, 99.9, 0.4284, "Subpanel");
         comps_arq.add(new Componente());
-        comps_arq.get(3).setAll("5", 5.0, 99.5, 0.35568, "PowerStrip");
-        AlgGenetico alg = new AlgGenetico(comps_arq, 30, 7000, 0.4, 1, 10);
+        comps_arq.get(3).setAll("4", 5.0, 99.5, 0.35568, "PowerStrip");
+        
+        comps_arq.add(new Componente());
+        comps_arq.get(4).setAll("5", 550.0, 98.5, 0.35568, "Server");
+        comps_arq.add(new Componente());
+        comps_arq.get(5).setAll("11", 550.0, 98.5, 0.35568, "Server");
+        comps_arq.add(new Componente());
+        comps_arq.get(6).setAll("6", 550.0, 99.9, 0.35568, "Router");
+        comps_arq.add(new Componente());
+        comps_arq.get(7).setAll("7", 550.0, 99.5, 0.35568, "Switch");
+        
+        comps_arq.add(new Componente());
+        comps_arq.get(8).setAll("8", 20.0, 98.5, 2.7296, "CRAC");
+        comps_arq.add(new Componente());
+        comps_arq.get(9).setAll("9", 15.0, 99.9, 4.5209, "Chiller");
+        comps_arq.add(new Componente());
+        comps_arq.get(10).setAll("10", 20.0, 99.5, 1.2795, "C_Tower");
+        AlgGenetico alg = new AlgGenetico(comps_arq, 30, 7000, 0.4, 1, 50);
     }
 
     public AlgGenetico(ArrayList<Componente> comps_arq,int qtdCromo, int period, double ec, int de, int eras) {
@@ -182,7 +198,7 @@ public class AlgGenetico {
                 }
                     cromo = new Cromossomo(genes, period, ec, de);
                     cromossomos.add(cromo);
-                    cromo.fitness(this.script);//.setScore(script);
+                    cromo.setScore(this.script);//.setScore(script);
                     cont++;
                 }
         }catch(Exception ex){
@@ -194,7 +210,7 @@ public class AlgGenetico {
     private void lerComponentes() {//le de um arquivo com varios componentes de todos os tipos e salva num dicionario (dicComp)
               try{
             //le o arquivo
-            File arquivo = new File("ComponentesAratA.txt");
+            File arquivo = new File("componentesBaseMenor.txt");
             FileReader fr = new FileReader(arquivo);
             BufferedReader br = new BufferedReader(fr);
             br.readLine();
@@ -211,6 +227,12 @@ public class AlgGenetico {
             this.dicComp.put("GeneratorGroup", new ArrayList<Componente>());
             this.dicComp.put("GeneratorGroup500", new ArrayList<Componente>());
             this.dicComp.put("JunctionBox", new ArrayList<Componente>());
+            this.dicComp.put("Server", new ArrayList<Componente>());
+            this.dicComp.put("Switch", new ArrayList<Componente>());
+            this.dicComp.put("Router", new ArrayList<Componente>());
+            this.dicComp.put("Chiller", new ArrayList<Componente>());
+            this.dicComp.put("C_Tower", new ArrayList<Componente>());
+            this.dicComp.put("CRAC", new ArrayList<Componente>());
             //preenche o dicionario com os componentes do arquivo, separando-os por chave
             Componente comp;
             while (br.ready()){
@@ -239,8 +261,8 @@ public class AlgGenetico {
         cromo1 = (Cromossomo) obj[0];
         cromo2 = (Cromossomo) obj[1];
         //System.out.println("esc");
-        cromo1.fitness(this.script);//cromo1.setScore(this.script);
-        cromo2.fitness(this.script);//cromo2.setScore(this.script);
+        cromo1.setScore(this.script);//cromo1.setScore(this.script);
+        cromo2.setScore(this.script);//cromo2.setScore(this.script);
         
         //System.out.println(cromo1);
         //System.out.println(cromo2);
@@ -278,8 +300,8 @@ public class AlgGenetico {
             
                 quebra--;
             }
-            cruza1.fitness(this.script);//.setScore(this.script);
-            cruza2.fitness(this.script);//.setScore(this.script);
+            cruza1.setScore(this.script);//.setScore(this.script);
+            cruza2.setScore(this.script);//.setScore(this.script);
             /*System.out.println(cruza1);
             System.out.println(cruza2);
             System.out.println("\n\n---------------------------------------\n\n");*/
@@ -321,13 +343,13 @@ public class AlgGenetico {
         int var = this.rand.nextInt(cromossomos.size());
         aleat[0] = var;
         torneio[0] = cromossomos.get(var);
-        torneio[0].fitness(this.script);//.setScore(script);
+        torneio[0].setScore(this.script);//.setScore(script);
         
         for (int i = 1; i<4;i++){
             var = this.rand.nextInt(cromossomos.size());
             aleat[i] = var;
             torneio[i] = cromossomos.get(var);
-            torneio[i].fitness(this.script);//.setScore(script);
+            torneio[i].setScore(this.script);//.setScore(script);
             for (int j = 0; j<i;j++){
                 if (aleat[i] == aleat[j]){
                     i--;

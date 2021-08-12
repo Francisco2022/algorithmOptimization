@@ -1,0 +1,15 @@
+
+
+disponibilidade ordenado
+0.0
+
+
+custo ordenado
+0.0
+
+
+exergia ordenado
+0.0
+---------------------------
+crowd
+1.7976931348623157E308

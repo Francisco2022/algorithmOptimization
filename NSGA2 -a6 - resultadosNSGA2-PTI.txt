@@ -1,0 +1,20 @@
+
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip4 - Server5 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - 1.7976931348623157E308
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip5 - Server4 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - NaN
+UPS_5kVA1 - SDTransformer3 - Subpanel4 - PowerStrip4 - Server5 - Router5 - Switch3 - CRAC5 - Chiller2 - C_Tower3 - NaN
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip4 - Server5 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - NaN
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip4 - Server5 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - 0.0
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip5 - Server4 - Router5 - Switch5 - CRAC5 - Chiller2 - C_Tower3 - 0.0
+UPS_5kVA1 - SDTransformer3 - Subpanel4 - PowerStrip4 - Server5 - Router5 - Switch3 - CRAC5 - Chiller2 - C_Tower3 - 0.0
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip4 - Server5 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - 0.0
+UPS_5kVA1 - SDTransformer4 - Subpanel1 - PowerStrip3 - Server4 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - NaN
+UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip5 - Server2 - Router1 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - NaN
+
+
+maior   UPS_5kVA1 - SDTransformer5 - Subpanel1 - PowerStrip4 - Server5 - Router5 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - 1.7976931348623157E308
+disp	0.9949980284259761	custo: 0.0	exer: 1.0622837194287602	Disp em num9s   2.300858780674214
+
+
+comecou em: 182 , 18 : 27 : 44
+finalizou em: 182 , 18 : 27 : 47
+demorou:3

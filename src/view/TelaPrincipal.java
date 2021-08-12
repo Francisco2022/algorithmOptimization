@@ -45,7 +45,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import com.mxgraph.util.mxUtils;
 import java.util.ArrayList;
-import newCpn.GerarCPN;
+//import newCpn.GerarCPN;
 
 
 public class TelaPrincipal extends JFrame { //implements ActionListener, MouseListener, MouseMotionListener {
@@ -102,8 +102,8 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
         mxEvent = new mxEvent();
         // o sistema entende que o icone selecionado será o icone que 
         // aparecerá ao lado do titulo do sistema e também na barra de tarefas.
-        ImageIcon icone = new ImageIcon(getClass().getResource("/ico/ico_System.png")); 
-        setIconImage(icone.getImage());
+        //ImageIcon icone = new ImageIcon(getClass().getResource("//ico//ico_System.png")); 
+        //setIconImage(icone.getImage());
         btZoomOut.setEnabled(false);
         resultado = "";
         
@@ -337,12 +337,11 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
         pnMenuBar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pnMenuBar.setPreferredSize(new java.awt.Dimension(174, 30));
 
-        btOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/open.png"))); // NOI18N
+        btOpen.setText("abrir");
         btOpen.setBorder(null);
         btOpen.setBorderPainted(false);
         btOpen.setContentAreaFilled(false);
         btOpen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btOpen.setDisabledIcon(null);
         btOpen.setFocusable(false);
         btOpen.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btOpen.setMinimumSize(new java.awt.Dimension(24, 24));
@@ -353,12 +352,11 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/new.png"))); // NOI18N
+        btNew.setText("novo");
         btNew.setBorder(null);
         btNew.setBorderPainted(false);
         btNew.setContentAreaFilled(false);
         btNew.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btNew.setDisabledIcon(null);
         btNew.setFocusable(false);
         btNew.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btNew.setMinimumSize(new java.awt.Dimension(24, 24));
@@ -369,12 +367,11 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/save.png"))); // NOI18N
+        btSave.setText("salvar");
         btSave.setBorder(null);
         btSave.setBorderPainted(false);
         btSave.setContentAreaFilled(false);
         btSave.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btSave.setDisabledIcon(null);
         btSave.setFocusable(false);
         btSave.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btSave.setMinimumSize(new java.awt.Dimension(24, 24));
@@ -387,7 +384,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        btBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/redo.png"))); // NOI18N
+        btBack.setText("desf");
         btBack.setBorder(null);
         btBack.setBorderPainted(false);
         btBack.setContentAreaFilled(false);
@@ -401,7 +398,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btForward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/undo.png"))); // NOI18N
+        btForward.setText("ref");
         btForward.setBorder(null);
         btForward.setBorderPainted(false);
         btForward.setContentAreaFilled(false);
@@ -418,7 +415,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        btCpn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/cpn5.png"))); // NOI18N
+        btCpn.setText("CPN");
         btCpn.setBorder(null);
         btCpn.setBorderPainted(false);
         btCpn.setContentAreaFilled(false);
@@ -441,7 +438,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        btView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/eyesoff.png"))); // NOI18N
+        btView.setText("olho");
         btView.setBorder(null);
         btView.setBorderPainted(false);
         btView.setContentAreaFilled(false);
@@ -455,7 +452,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btGrid.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/grid3.png"))); // NOI18N
+        btGrid.setText("grade");
         btGrid.setBorder(null);
         btGrid.setBorderPainted(false);
         btGrid.setContentAreaFilled(false);
@@ -469,7 +466,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btZoomOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/zoomout.png"))); // NOI18N
+        btZoomOut.setText("- - -");
         btZoomOut.setBorder(null);
         btZoomOut.setBorderPainted(false);
         btZoomOut.setContentAreaFilled(false);
@@ -483,7 +480,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btZoomIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/zoomin.png"))); // NOI18N
+        btZoomIn.setText("+++");
         btZoomIn.setBorder(null);
         btZoomIn.setBorderPainted(false);
         btZoomIn.setContentAreaFilled(false);
@@ -497,13 +494,11 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/fill.png"))); // NOI18N
+        btBackground.setText("cor");
         btBackground.setBorder(null);
         btBackground.setBorderPainted(false);
         btBackground.setContentAreaFilled(false);
         btBackground.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btBackground.setDisabledIcon(null);
-        btBackground.setDisabledSelectedIcon(null);
         btBackground.setFocusable(false);
         btBackground.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btBackground.addActionListener(new java.awt.event.ActionListener() {
@@ -512,7 +507,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btRbd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/rbd5.png"))); // NOI18N
+        btRbd.setText("RBD");
         btRbd.setBorder(null);
         btRbd.setBorderPainted(false);
         btRbd.setContentAreaFilled(false);
@@ -526,7 +521,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btSpn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/spn5.png"))); // NOI18N
+        btSpn.setText("SPN");
         btSpn.setBorder(null);
         btSpn.setBorderPainted(false);
         btSpn.setContentAreaFilled(false);
@@ -539,7 +534,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             }
         });
 
-        btEfm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ico/efm5.png"))); // NOI18N
+        btEfm.setText("EFM");
         btEfm.setBorder(null);
         btEfm.setBorderPainted(false);
         btEfm.setContentAreaFilled(false);
@@ -771,7 +766,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(pnMenuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 511, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 514, Short.MAX_VALUE)
                 .addComponent(pnStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -893,8 +888,8 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
 //        GerarCPNTestes_B cpn = new GerarCPNTestes_B();
 //        GerarArquivoScriptCPN cpn = new GerarArquivoScriptCPN();
 //        cpn.imprimirScript();
-        GerarCPN cpn = new GerarCPN();
-        cpn.imprimirScript(acGrafo.getVertices());
+        //GerarCPN cpn = new GerarCPN();
+        //cpn.imprimirScript(acGrafo.getVertices());
     }//GEN-LAST:event_btCpnActionPerformed
 //------------------------------------------------------------------------------
     private void btViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btViewActionPerformed
@@ -1279,7 +1274,7 @@ public class TelaPrincipal extends JFrame { //implements ActionListener, MouseLi
             String script = gEFM.gerarScript2(vertices);
             this.arqS.preencherScript(scriptAv + "\n" + script);
 
-                        Componente comp;
+            Componente comp;
             ArrayList<Componente> comps = new ArrayList<>();
             for (Object vert : vertices) {
                 comp = (Componente) ((mxCell) vert).getValue();

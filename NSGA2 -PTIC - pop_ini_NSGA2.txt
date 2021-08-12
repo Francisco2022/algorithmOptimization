@@ -1,0 +1,10 @@
+UPS_5kVA4 - SDTransformer3 - Subpanel2 - PowerStrip3 - Server2 - Router1 - Switch5 - CRAC2 - Chiller2 - C_Tower3 - 1.7976931348623157E308
+UPS_5kVA5 - SDTransformer5 - Subpanel3 - PowerStrip1 - Server2 - Router4 - Switch4 - CRAC1 - Chiller4 - C_Tower3 - 1.7976931348623157E308
+UPS_5kVA5 - SDTransformer2 - Subpanel1 - PowerStrip2 - Server5 - Router1 - Switch3 - CRAC5 - Chiller2 - C_Tower4 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer3 - Subpanel4 - PowerStrip4 - Server1 - Router1 - Switch3 - CRAC5 - Chiller3 - C_Tower2 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer3 - Subpanel1 - PowerStrip4 - Server2 - Router3 - Switch4 - CRAC3 - Chiller1 - C_Tower1 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer1 - Subpanel2 - PowerStrip5 - Server3 - Router1 - Switch3 - CRAC2 - Chiller5 - C_Tower5 - 1.7976931348623157E308
+UPS_5kVA3 - SDTransformer2 - Subpanel3 - PowerStrip4 - Server4 - Router1 - Switch3 - CRAC3 - Chiller2 - C_Tower4 - 1.7976931348623157E308
+UPS_5kVA5 - SDTransformer1 - Subpanel3 - PowerStrip1 - Server5 - Router4 - Switch4 - CRAC1 - Chiller1 - C_Tower1 - 1.7976931348623157E308
+UPS_5kVA2 - SDTransformer1 - Subpanel1 - PowerStrip3 - Server3 - Router1 - Switch3 - CRAC1 - Chiller2 - C_Tower3 - 1.7976931348623157E308
+UPS_5kVA1 - SDTransformer2 - Subpanel5 - PowerStrip3 - Server1 - Router5 - Switch4 - CRAC4 - Chiller3 - C_Tower5 - 1.7976931348623157E308

@@ -1,0 +1,34 @@
+Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer2 - Subpanel3 - PowerStrip3 - UPS_5kVA5 - STS5 - 0.9988440679215073Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer1 - Subpanel3 - PowerStrip1 - UPS_5kVA4 - STS2 - 0.9992617446946931Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer2 - Subpanel1 - PowerStrip4 - UPS_5kVA3 - STS5 - 0.9988360125892487Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer2 - Subpanel3 - PowerStrip3 - UPS_5kVA4 - STS1 - 0.9989205897848509Algoritmo Diferencial Evolucionario
+UPS_5kVA1 - SDTransformer2 - Subpanel1 - PowerStrip5 - UPS_5kVA3 - STS5 - 0.9988447955890847Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer2 - Subpanel4 - PowerStrip4 - UPS_5kVA2 - STS2 - 0.9987744446481193Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer4 - Subpanel4 - PowerStrip4 - UPS_5kVA2 - STS1 - 0.9994040369342363Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer1 - Subpanel4 - PowerStrip2 - UPS_5kVA3 - STS2 - 0.9992739202855917Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer1 - Subpanel1 - PowerStrip5 - UPS_5kVA4 - STS2 - 0.9992685930777206Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer1 - Subpanel2 - PowerStrip3 - UPS_5kVA2 - STS4 - 0.9993821594647283Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer2 - Subpanel2 - PowerStrip3 - UPS_5kVA4 - STS5 - 0.9988453839641249Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer3 - Subpanel3 - PowerStrip5 - UPS_5kVA3 - STS2 - 0.9993161852354799Algoritmo Diferencial Evolucionario
+UPS_5kVA1 - SDTransformer2 - Subpanel3 - PowerStrip5 - UPS_5kVA1 - STS5 - 0.9988391179396967Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer3 - Subpanel1 - PowerStrip5 - UPS_5kVA4 - STS2 - 0.9993219031239047Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer2 - Subpanel2 - PowerStrip4 - UPS_5kVA2 - STS1 - 0.9989081432936955Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer1 - Subpanel3 - PowerStrip5 - UPS_5kVA1 - STS5 - 0.9993245397935331Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer5 - Subpanel1 - PowerStrip4 - UPS_5kVA1 - STS2 - 0.999297769346043Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer1 - Subpanel4 - PowerStrip3 - UPS_5kVA2 - STS1 - 0.999411778655342Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer2 - Subpanel2 - PowerStrip3 - UPS_5kVA2 - STS5 - 0.9988453725168603Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer2 - Subpanel2 - PowerStrip1 - UPS_5kVA3 - STS2 - 0.9987776250474384Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer3 - Subpanel1 - PowerStrip1 - UPS_5kVA1 - STS3 - 0.9994334219872808Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer5 - Subpanel4 - PowerStrip1 - UPS_5kVA3 - STS1 - 0.9994435987633175Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer5 - Subpanel4 - PowerStrip5 - UPS_5kVA1 - STS1 - 0.9994447716195035Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer2 - Subpanel2 - PowerStrip2 - UPS_5kVA2 - STS3 - 0.9988967287280437Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer3 - Subpanel2 - PowerStrip3 - UPS_5kVA2 - STS3 - 0.9994351575247579Algoritmo Diferencial Evolucionario
+UPS_5kVA3 - SDTransformer3 - Subpanel3 - PowerStrip3 - UPS_5kVA2 - STS4 - 0.999434151971174Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer4 - Subpanel2 - PowerStrip3 - UPS_5kVA4 - STS3 - 0.999387855273334Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer2 - Subpanel3 - PowerStrip3 - UPS_5kVA2 - STS1 - 0.9989205832176803Algoritmo Diferencial Evolucionario
+UPS_5kVA4 - SDTransformer2 - Subpanel4 - PowerStrip4 - UPS_5kVA3 - STS1 - 0.9989125663808094Algoritmo Diferencial Evolucionario
+UPS_5kVA2 - SDTransformer3 - Subpanel3 - PowerStrip5 - UPS_5kVA5 - STS3 - 0.9994288861121084
+
+
+maior   UPS_5kVA3 - SDTransformer5 - Subpanel4 - PowerStrip5 - UPS_5kVA1 - STS1 - 0.9994447716195035

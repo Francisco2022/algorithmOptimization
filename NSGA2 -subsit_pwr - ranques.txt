@@ -1,0 +1,2 @@
+rank - op_exegergy - total_cost - availability
+1    0.0    0.0    0.0    

@@ -1,0 +1,20 @@
+
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - NaN
+UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - 1.7976931348623157E308
+
+
+maior   UPS_5kVA4 - SDTransformer5 - Subpanel1 - PowerStrip4 - 1.7976931348623157E308
+disp	0.9994071788255546	custo: 0.0	exer: 0.9233257147142727	Disp em num9s   3.227076292578411
+
+
+comecou em: 224 , 12 : 9 : 42
+finalizou em: 224 , 12 : 9 : 44
+demorou:2

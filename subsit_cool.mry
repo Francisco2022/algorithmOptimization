@@ -1,0 +1,119 @@
+EFM ModelEFM{
+	component SourcePoint1(
+		type = "SourcePoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0,
+			demandedEnergy = de
+		)
+	);
+
+	component TargetPoint1(
+		type = "TargetPoint",
+		parameters = (
+			efficiency = 100.0,
+			retailPrice = 0.0
+		)
+	);
+
+	component CRAC9(
+		type = "CRAC",
+		parameters = (
+			maxPower = mp9,
+			efficiency = ef9,
+			retailPrice = rp9,
+			embeddedEnergy = emb9,
+			roomTemperature = 20.0,
+			coldWaterTemperature = 7.0
+		)
+	);
+
+	component Chiller10(
+		type = "Chiller",
+		parameters = (
+			maxPower = mp10,
+			efficiency = ef10,
+			retailPrice = rp10,
+			embeddedEnergy = emb10,
+			chilledWaterTemperature = 7.0,
+			collingWaterTemperature = 35.0
+		)
+	);
+
+	component C_Tower_C11(
+		type = "C_Tower_C",
+		parameters = (
+			maxPower = mp11,
+			retailPrice = rp11,
+			embeddedEnergy = emb11,
+			hotWaterTemperature = 35.0,
+			environmentTemperature = 25.0
+		)
+	);
+
+        
+	arc SourcePoint1 -> C_Tower_C11;
+	arc C_Tower_C11 -> Chiller10;
+	arc Chiller10 -> CRAC9;
+	arc CRAC9 -> TargetPoint1;
+
+	metric ic = initialCost( eletricityCost = ec);
+	metric oc = operationalCost( eletricityCost = ec, availability = aval, time = period );
+	metric ee = embeddedExergy;
+	metric oe = operationalExergy( time = period, availability = aval);
+	metric tc(ic + oc);
+	metric te(ee + oe);
+}
+
+t = 100;
+
+
+RBD ModelRBD{
+
+   block b9( MTTF = mttf9, MTTR = 8.0);
+   block b10( MTTF = mttf10, MTTR = 48);
+   block b11( MTTF = mttf11, MTTR = 48);
+
+   series s3(b9, b10, b11);
+
+   top s3;
+
+   metric av = availability;
+   metric rel = reliability( time = t );
+   metric mttf = mttf;
+   metric mttr = mttr;
+}
+
+
+main{
+
+	av = solve(ModelRBD, av);
+	rel = solve(ModelRBD, rel);
+	mttf = solve(ModelRBD, mttf);
+	mttr = solve(ModelRBD, mttr);
+
+	println("Availability: " .. av );
+	println("Reliability: " .. rel );
+	println("Mean time to failure: " .. mttf );
+	println("Mean time to repair: " .. mttr );
+
+
+
+	ic = solve(ModelEFM, ic);
+	println("Acquisition Cost: " .. ic);
+	oc = solve(ModelEFM, oc);
+	println("Operational Cost: " .. oc);
+	tc = solve(ModelEFM, tc);
+	println("Total Cost: " .. tc);
+	
+	println("");
+	
+	ee = solve(ModelEFM, ee);
+	println("Embedded Exergy: " .. ee);
+	oe = solve(ModelEFM, oe);
+	println("Operational Exergy: " .. oe);
+	te = solve(ModelEFM, te);
+	println("Total Exergy: " .. te);
+
+
+}

@@ -170,9 +170,11 @@ public class Cromossomo implements Cloneable{
         runtime.getVariableTable().setValue("de", this.de);
         
         Metric TCost = runtime.getModel("ModelEFM").getMetric("tc");
-        this.totalCost = TCost.solve();
+        //this.totalCost = TCost.solve();
         Metric opExergy = runtime.getModel("ModelEFM").getMetric("oe");
         this.operationalExergy = opExergy.solve();
+        
+        System.out.println("passou");
         
         //Melhorar a funcao objetivo (fitness) para ser multiobjetivo
         //this.score = this.availability;//this.fitness();
@@ -255,7 +257,7 @@ public class Cromossomo implements Cloneable{
             String idVert = comp.getIdVert();
             //System.out.println("id" + idVert + comp.getTipoComp());
             ideq += comp.getId() + " - ";
-            //System.out.println("id" + idVert);
+            //System.out.println("id" + idVert);temos de ver qual o script que está sendo lido
             
                        
             runtime.getVariableTable().setValue("mttf"+idVert, comp.getMttf());

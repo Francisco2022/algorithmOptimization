@@ -157,7 +157,7 @@ public class JanelaDifEvo extends javax.swing.JDialog {
         int eras = Integer.parseInt(String.valueOf(cbQtdGeracoes.getSelectedItem()));
         
         new AlgDiferencial.AlgDiferencial(comps, qtdCromo, period, ec, de, eras);*/
-        new AlgDiferencial.AlgDiferencial(comps, 50, 7000, 0.4, 1, 100);
+        //new AlgDiferencial.AlgDiferencial(comps, 50, 7000, 0.4, 1, 100);
         
         /*int qtdCromo = 5;
         int period = 7000;

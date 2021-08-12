@@ -1,0 +1,10 @@
+CRAC3 - Chiller2 - C_Tower_C3 - 1.7976931348623157E308
+CRAC3 - Chiller1 - C_Tower_C3 - 1.7976931348623157E308
+CRAC1 - Chiller4 - C_Tower_C4 - 1.7976931348623157E308
+CRAC3 - Chiller5 - C_Tower_C3 - 1.7976931348623157E308
+CRAC4 - Chiller2 - C_Tower_C3 - NaN
+CRAC4 - Chiller3 - C_Tower_C3 - 1.7976931348623157E308
+CRAC2 - Chiller3 - C_Tower_C5 - NaN
+CRAC1 - Chiller4 - C_Tower_C5 - NaN
+CRAC1 - Chiller3 - C_Tower_C5 - NaN
+CRAC1 - Chiller3 - C_Tower_C2 - NaN

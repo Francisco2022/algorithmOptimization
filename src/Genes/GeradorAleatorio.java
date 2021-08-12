@@ -12,6 +12,8 @@ import java.util.Map;
 import view.Componente;
 
 public class GeradorAleatorio {
+
+    
     private Map<String, Map<String, Double[]>> valores;
     //private static double vari;
     //private static int qtd;
@@ -19,8 +21,9 @@ public class GeradorAleatorio {
     
     public static void main(String[] args){
         double vari = 0.3;//variacao dos valores a partir do padrao
-        int qtd = 10;//quantidade de componetes aleatorios a ser criado
-        geraAleatorios(qtd);
+        int qtd = 5;//quantidade de componetes aleatorios a ser criado
+        gerarTIeCooling(qtd);
+        //geraAleatorios(qtd);
         //ArrayList<Componente> comps = decodeCompsTipos();//decodifica os diferentes tipos de componentes
         //geraAleatorios(comps, vari, qtd);//gera varios componentes de cada tipo com valores aleatorios
         /*try{
@@ -94,6 +97,67 @@ public class GeradorAleatorio {
         }
         return comps;
     }
+    
+    private static void gerarTIeCooling(int qtd) {
+        try {
+            FileWriter arq = new FileWriter("base3em1.txt");
+            PrintWriter gravarArq = new PrintWriter(arq);
+
+            gravarArq.printf("id;name;type;mttf;eff;aquisitionCost");
+
+            String dados = "";
+            
+            
+            gravarArq.printf(dados);
+            //(String idVert,double mttf, double mttr, double poderMax, double eficiencia, double preco, double energia, String tipoComp)
+            Componente server = new Componente();
+            server.setAll("0", 1414, 0.99, 550.0, 90.0, 3000.0, 0.35568, "Server");
+            dados = aleatorios(server, qtd, 0.3);
+            gravarArq.printf(dados);
+            
+            Componente router = new Componente();
+            router.setAll("0", 12181, 0.52, 550.0, 90.0, 4000.0, 0.35568, "Router");
+            dados = aleatorios(router, qtd, 0.3);
+            gravarArq.printf(dados);
+            
+            Componente sw1tch = new Componente();
+            sw1tch.setAll("0", 9090, 0.64, 550.0, 90.0, 400.0, 0.35568, "Switch");
+            dados = aleatorios(sw1tch, qtd, 0.3);
+            gravarArq.printf(dados);
+            
+            Componente crac = new Componente();
+            crac.setAll("0", 37509, 8, 20.0, 98.0, 3200.0, 2.7296, "CRAC");
+            dados = aleatorios(crac, qtd, 0.3);
+            gravarArq.printf(dados);
+            
+            Componente Chiller = new Componente();
+            Chiller.setAll("0", 18000, 48, 15.0, 4.0, 5300.0, 4.5209, "Chiller");
+            dados = aleatorios(Chiller, qtd, 0.3);
+            gravarArq.printf(dados);
+            
+            Componente C_Tower = new Componente();
+            C_Tower.setAll("0", 24816, 48, 20.0, 98.0, 1500.0, 2.7296, "C_Tower");
+            dados = aleatorios(C_Tower, qtd, 0.3);
+            gravarArq.printf(dados);
+            
+            dados = aleatUPS("UPS_5kVA", qtd);
+            dados += aleatUPS("UPS_250kVA", qtd);//mttf 25000, 75000; ac 11250, 18750; eff 90.535, 99.9//mttf = 200000,efficiency = 95.3,retailPrice = 60000.0,mttr = 0.5
+            dados += aleatSDT("SDTransformer", qtd);
+            dados += aleatSp("Subpanel", qtd);
+            dados += aleatPS("PowerStrip", qtd);
+            dados += aleatSTS("STS", qtd);
+            dados += aleatATS("ATS", qtd);
+            dados += aleat("ACSource", qtd, 2190.0, 6570.0, 11250.0, 18750.0,90.535, 99.9);//efficiency = 95.3,retailPrice = 15000.0,);
+            dados += aleat("GeneratorGroup", qtd, 1095, 3285, 45000, 75000, 23.75, 26.25);//efficiency = 25.0,retailPrice = 66000.0,
+            dados += aleat("GeneratorGroup500", qtd, 1095, 3285, 45000, 75000, 23.75, 26.25);
+            dados += aleat("JunctionBox", qtd, 2612000, 7836000, 112.50, 187.50,94.905, 99.9);//
+            gravarArq.printf(dados);
+            arq.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
     private static void geraAleatorios(int qtd){
         try {
             FileWriter arq = new FileWriter("componentesBaseMenor.txt");
@@ -121,7 +185,7 @@ public class GeradorAleatorio {
             ex.printStackTrace();
         }
     }
-    private static void geraAleatorios(ArrayList<Componente> comps, double vari, int qtd){
+    /*private static void geraAleatorios(ArrayList<Componente> comps, double vari, int qtd){
         try {
             FileWriter arq = new FileWriter("componentes.txt");
             PrintWriter gravarArq = new PrintWriter(arq);
@@ -138,25 +202,26 @@ public class GeradorAleatorio {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }
+    }*/
     
-    private static String[] aleatorios(Componente comp, int qtd, double vari){
-        String dados;
+    private static String aleatorios(Componente comp, int qtd, double vari){
+        String dados = "";
         int cont = 0;
         String aleatorio[] = new String[qtd];
         while (cont< qtd){
-            dados = "\n";
-            dados += (cont+1) + ";";
-            dados += comp.getNomeComp() + (cont+1) + ";";
+            cont ++;
+            dados += "\n";
+            dados += (cont) + ";";
+            dados += comp.getNomeComp() + (cont) + ";";
             dados += comp.getTipoComp() + ";";
             dados += randMttf(comp.getMttf()) + ";";
             dados += randEff(comp.getEficiencia()) + ";";
             dados += randPreco(comp.getPreco());
             
-            aleatorio[cont] = dados;
-            cont ++;
+            //aleatorio[cont] = dados;
+            
         }
-        return aleatorio;
+        return dados;
     }
     
     private static ArrayList<Componente> aleatorios(Componente comp, double vari, int qtd){
@@ -208,8 +273,9 @@ public class GeradorAleatorio {
         double max = eff + eff*0.15;
         
         double rand = min + Math.random()*(max-min);
-        if (rand > 0.99){
-            rand = 0.99999;
+        System.out.println("rand eff " + rand);
+        if (rand > 99){
+            rand = 99.999;
         }
         return rand;
     }
@@ -221,7 +287,7 @@ public class GeradorAleatorio {
         double rand = min + Math.random()*(max-min);
         return rand;
     }
-        private static String aleat(String comp, int qtd, double mttf_min, double mttf_max, double eff_min, double eff_max, double ac_min, double ac_max){
+    private static String aleat(String comp, int qtd, double mttf_min, double mttf_max, double eff_min, double eff_max, double ac_min, double ac_max){
         int cont = 0;//mttf;eff;aquisitionCost
         String dados = "";
         while (cont< qtd){

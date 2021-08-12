@@ -116,6 +116,11 @@ EFM Model{
 		)
 	);
 
+        arc SourcePoint1 -> Router1;
+	arc Router1 -> Switch1;
+	arc Switch1 -> Server1;
+	arc Server1 -> TargetPoint1;
+
 	arc SourcePoint1 -> Server1;
 	arc Server1 -> Switch1;
 	arc Switch1 -> Router1;

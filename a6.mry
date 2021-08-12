@@ -190,7 +190,7 @@ RBD ModelRBDCold{
 
    series s1(a, b7, b3, b4, b5);
 
-   parallel p0(s1);
+   parallel p0(s1);isso
 
    top p0;
 

@@ -1,0 +1,20 @@
+
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - NaN
+Server5 - Router5 - Switch5 - 1.7976931348623157E308
+
+
+maior   Server5 - Router5 - Switch5 - 1.7976931348623157E308
+disp	0.998912647585303	custo: 0.0	exer: 0.10058529349161854	Disp em num9s   2.963629676747852
+
+
+comecou em: 224 , 12 : 12 : 33
+finalizou em: 224 , 12 : 12 : 35
+demorou:2

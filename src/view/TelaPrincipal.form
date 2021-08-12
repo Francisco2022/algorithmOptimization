@@ -220,7 +220,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Component id="pnMenuBar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="511" max="32767" attributes="0"/>
+              <EmptySpace pref="514" max="32767" attributes="0"/>
               <Component id="pnStatus" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -408,9 +408,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btOpen">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/open.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="abrir"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -418,9 +416,6 @@
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor em Forma de M&#xe3;o"/>
-            </Property>
-            <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="0" name="null"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -437,9 +432,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btNew">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/new.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="novo"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -447,9 +440,6 @@
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor em Forma de M&#xe3;o"/>
-            </Property>
-            <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="0" name="null"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -466,9 +456,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btSave">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/save.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="salvar"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -476,9 +464,6 @@
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor em Forma de M&#xe3;o"/>
-            </Property>
-            <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="0" name="null"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -502,9 +487,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btBack">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/redo.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="desf"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -525,9 +508,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btForward">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/undo.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="ref"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -558,9 +539,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btCpn">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/cpn5.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="CPN"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -611,9 +590,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btView">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/eyesoff.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="olho"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -634,9 +611,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btGrid">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/grid3.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="grade"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -657,9 +632,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btZoomOut">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/zoomout.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="- - -"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -680,9 +653,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btZoomIn">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/zoomin.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="+++"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -703,9 +674,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btBackground">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/fill.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="cor"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -713,12 +682,6 @@
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor em Forma de M&#xe3;o"/>
-            </Property>
-            <Property name="disabledIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="0" name="null"/>
-            </Property>
-            <Property name="disabledSelectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="0" name="null"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -729,9 +692,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btRbd">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/rbd5.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="RBD"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -752,9 +713,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btSpn">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/spn5.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="SPN"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -772,9 +731,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btEfm">
           <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/ico/efm5.png"/>
-            </Property>
+            <Property name="text" type="java.lang.String" value="EFM"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>

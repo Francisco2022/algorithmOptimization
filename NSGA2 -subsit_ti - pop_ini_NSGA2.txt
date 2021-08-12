@@ -1,0 +1,10 @@
+Server4 - Router2 - Switch4 - 1.7976931348623157E308
+Server4 - Router3 - Switch4 - 1.7976931348623157E308
+Server2 - Router3 - Switch2 - 1.7976931348623157E308
+Server5 - Router4 - Switch5 - 1.7976931348623157E308
+Server3 - Router1 - Switch5 - 1.7976931348623157E308
+Server2 - Router5 - Switch4 - 1.7976931348623157E308
+Server1 - Router1 - Switch1 - NaN
+Server2 - Router1 - Switch1 - 1.7976931348623157E308
+Server2 - Router5 - Switch2 - 1.7976931348623157E308
+Server1 - Router1 - Switch3 - 1.7976931348623157E308

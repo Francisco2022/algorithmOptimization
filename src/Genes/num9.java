@@ -20,9 +20,20 @@ public class num9 {
         
         System.out.println("normal\t" + normal);
         
-        System.out.println("A4 num9s    " + (-Math.log10(1-0.9999999789838206)));
-        System.out.println("A5 num9s    " + (-Math.log(1-0.9999927989458165)));
+        System.out.println("A1 num9s    " + (-Math.log10(1-0.9994200087796523)));
+        System.out.println("A2 num9s    " + (-Math.log10(1-0.9993508035968919)));
+        System.out.println("A3 num9s    " + (-Math.log10(1-0.9997754653163834)));
+        System.out.println("A4 num9s    " + (-Math.log10(1-0.9997824215650847)));
+        System.out.println("A5 num9s    " + (-Math.log10(1-0.9999996730468349)));
+        
+        System.out.println("A5 num9s    " + (-Math.log10(1-0.9999996942493534)));
+        
+
+
+
     }
+    
+    
     
     static double normalizar(double min, double max, double atual){
         double normal;

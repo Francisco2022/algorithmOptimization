@@ -155,4 +155,20 @@ main{
 	println("Reliability: " .. rel );
 	println("Mean time to failure: " .. mttf );
 	println("Mean time to repair: " .. mttr );
+
+        ic = solve(ModelEFM, ic);
+	println("Acquisition Cost: " .. ic);
+	oc = solve(ModelEFM, oc);
+	println("Operational Cost: " .. oc);
+	tc = solve(ModelEFM, tc);
+	println("Total Cost: " .. tc);
+	
+	println("");
+	
+	ee = solve(ModelEFM, ee);
+	println("Embedded Exergy: " .. ee);
+	oe = solve(ModelEFM, oe);
+	println("Operational Exergy: " .. oe);
+	te = solve(ModelEFM, te);
+	println("Total Exergy: " .. te);
 }

@@ -57,6 +57,12 @@ public class GerarTodosA1 {
             dicComp.put("GeneratorGroup", new ArrayList<Componente>());
             dicComp.put("GeneratorGroup500", new ArrayList<Componente>());
             dicComp.put("JunctionBox", new ArrayList<Componente>());
+            dicComp.put("Server", new ArrayList<Componente>());
+            dicComp.put("Switch", new ArrayList<Componente>());
+            dicComp.put("Router", new ArrayList<Componente>());
+            dicComp.put("Chiller", new ArrayList<Componente>());
+            dicComp.put("C_Tower", new ArrayList<Componente>());
+            dicComp.put("CRAC", new ArrayList<Componente>());
             
                                
             while (br.ready()) {

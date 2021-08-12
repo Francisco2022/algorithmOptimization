@@ -1,0 +1,20 @@
+
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+CRAC1 - Chiller4 - C_Tower_C4 - NaN
+
+
+maior   
+disp	0.0	custo: 0.0	exer: 0.0	Disp em num9s   -0.0
+
+
+comecou em: 224 , 12 : 14 : 21
+finalizou em: 224 , 12 : 14 : 22
+demorou:1
